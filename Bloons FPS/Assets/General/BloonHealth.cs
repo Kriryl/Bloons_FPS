@@ -9,5 +9,15 @@ public class BloonHealth : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         health -= damageAmount;
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        BroadcastMessage("OnDeath");
+        Destroy(gameObject);
     }
 }

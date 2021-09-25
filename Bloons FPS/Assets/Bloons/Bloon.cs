@@ -6,8 +6,15 @@ public class Bloon : MonoBehaviour
     private NavMeshAgent agent;
     private GameObject player;
     private BloonHealth health;
+    private bool isOn = true;
 
     public int Health => health.health;
+
+    public bool IsOn
+    {
+        get => isOn;
+        set => isOn = value;
+    }
 
     private void Start()
     {
@@ -18,8 +25,11 @@ public class Bloon : MonoBehaviour
 
     public virtual void SeekPlayer(float speed)
     {
-        agent.speed = speed;
-        agent.SetDestination(player.transform.position);
+        if (isOn)
+        {
+            agent.speed = speed;
+            agent.SetDestination(player.transform.position);
+        }
     }
 
     public virtual void OnDamageTaken(int damageAmount)
