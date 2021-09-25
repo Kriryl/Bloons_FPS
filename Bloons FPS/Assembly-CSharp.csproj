@@ -54,6 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Bloons\Bloon.cs" />
+    <Compile Include="Assets\Bloons\BloonType.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
