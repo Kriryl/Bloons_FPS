@@ -55,6 +55,8 @@
   <ItemGroup>
     <Compile Include="Assets\Bloons\Bloon.cs" />
     <Compile Include="Assets\Bloons\BloonType.cs" />
+    <Compile Include="Assets\General\BloonHealth.cs" />
+    <Compile Include="Assets\General\Damage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
