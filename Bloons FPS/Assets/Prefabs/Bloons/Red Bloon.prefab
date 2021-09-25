@@ -74,6 +74,8 @@ MonoBehaviour:
   speed: 1
   On: 1
   bloonName: Test Bloon
+  coinsOnDamage: 1
+  popvfx: {fileID: 2891127767421277930, guid: 6cc278c638d244c4aa33f163bb6f6ac2, type: 3}
 --- !u!114 &6747321228920201995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37926,7 +37928,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1548
+  m_VersionIndex: 1563
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -42874,7 +42876,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2042
+  m_VersionIndex: 2057
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

@@ -6,7 +6,9 @@ public class BloonType : Bloon
     public BloonType[] children;
     public float speed = 5f;
     public bool On = true;
-    public string bloonName = "Tets Bloon";
+    public string bloonName = "Test Bloon";
+    public float coinsOnDamage = 1f;
+    public ParticleSystem popvfx;
 
     private void Update()
     {
@@ -21,14 +23,14 @@ public class BloonType : Bloon
         print(damage != null);
         if (damage)
         {
-            OnDamageTaken(damage.damage);
+            OnDamageTaken(damage.damage, coinsOnDamage);
         }
     }
 
-    public override void OnDamageTaken(int damageAmount)
+    public override void OnDamageTaken(int damageAmount, float coinsToAdd)
     {
         print("damage");
-        base.OnDamageTaken(damageAmount);
+        base.OnDamageTaken(damageAmount, coinsToAdd);
     }
 
     public override void SeekPlayer(float speed)
@@ -38,6 +40,12 @@ public class BloonType : Bloon
     }
 
     internal void OnDeath()
+    {
+        Instantiate(popvfx, transform.position, transform.rotation);
+        SpawnChildren();
+    }
+
+    private void SpawnChildren()
     {
         if (children.Length <= 0) { return; }
         foreach (BloonType bloonType in children)

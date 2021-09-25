@@ -3,6 +3,7 @@ using UnityEngine.AI;
 
 public class Bloon : MonoBehaviour
 {
+    private Coins coin;
     private NavMeshAgent agent;
     private GameObject player;
     private BloonHealth health;
@@ -16,8 +17,11 @@ public class Bloon : MonoBehaviour
         set => isOn = value;
     }
 
+    
+
     private void Start()
     {
+        coin = FindObjectOfType<Coins>();
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("Player");
         health = GetComponent<BloonHealth>();
@@ -32,8 +36,9 @@ public class Bloon : MonoBehaviour
         }
     }
 
-    public virtual void OnDamageTaken(int damageAmount)
+    public virtual void OnDamageTaken(int damageAmount, float coinsToAdd)
     {
+        coin.AddCoins(coinsToAdd);
         health.TakeDamage(damageAmount);
     }
 }

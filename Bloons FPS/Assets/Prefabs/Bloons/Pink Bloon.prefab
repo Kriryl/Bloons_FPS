@@ -37826,7 +37826,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1593
+  m_VersionIndex: 1605
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -42774,7 +42774,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 2075
+  m_VersionIndex: 2087
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -42935,6 +42935,8 @@ MonoBehaviour:
   speed: 5
   On: 1
   bloonName: Green Bloon
+  coinsOnDamage: 1
+  popvfx: {fileID: 2891127767421277930, guid: 6cc278c638d244c4aa33f163bb6f6ac2, type: 3}
 --- !u!114 &4556085033672003215
 MonoBehaviour:
   m_ObjectHideFlags: 0
