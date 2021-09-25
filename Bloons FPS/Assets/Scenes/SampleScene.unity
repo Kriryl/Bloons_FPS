@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 5259046}
   - component: {fileID: 5259048}
   - component: {fileID: 5259047}
+  - component: {fileID: 5259049}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -3984,9 +3985,9 @@ ParticleSystem:
   TriggerModule:
     enabled: 0
     serializedVersion: 2
-    inside: 1
+    inside: 0
     outside: 0
-    enter: 0
+    enter: 2
     exit: 0
     colliderQueryMode: 0
     radiusScale: 1
@@ -4929,6 +4930,19 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &5259049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5259045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7640a850d8faf84438a9adba3061bdf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -5130,6 +5144,7 @@ GameObject:
   - component: {fileID: 938128212}
   - component: {fileID: 938128213}
   - component: {fileID: 938128214}
+  - component: {fileID: 938128215}
   m_Layer: 0
   m_Name: Bloon
   m_TagString: Untagged
@@ -5202,6 +5217,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+--- !u!135 &938128215
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938128210}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.62824446
+  m_Center: {x: 0, y: 0.62950045, z: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -5463,7 +5491,6 @@ GameObject:
   - component: {fileID: 1263730742}
   - component: {fileID: 1263730741}
   - component: {fileID: 1263730740}
-  - component: {fileID: 1263730739}
   m_Layer: 0
   m_Name: Bloon Top
   m_TagString: Untagged
@@ -5485,20 +5512,6 @@ Transform:
   m_Father: {fileID: 938128211}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1263730739
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1263730737}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 992263417}
 --- !u!33 &1263730740
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -43976,7 +43989,6 @@ GameObject:
   - component: {fileID: 1987986052}
   - component: {fileID: 1987986051}
   - component: {fileID: 1987986050}
-  - component: {fileID: 1987986049}
   m_Layer: 0
   m_Name: Pipe
   m_TagString: Untagged
@@ -43998,20 +44010,6 @@ Transform:
   m_Father: {fileID: 938128211}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1987986049
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987986047}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1827328169}
 --- !u!33 &1987986050
 MeshFilter:
   m_ObjectHideFlags: 10

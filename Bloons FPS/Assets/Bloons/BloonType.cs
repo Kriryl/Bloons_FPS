@@ -12,9 +12,11 @@ public class BloonType : Bloon
         SeekPlayer(speed);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnParticleCollision(GameObject other)
     {
-        Damage damage = collision.gameObject.transform.parent.parent.GetComponent<Damage>();
+        print("asfha");
+        Damage damage = other.GetComponent<Damage>();
+        print(damage != null);
         if (damage)
         {
             OnDamageTaken(damage.damage);
