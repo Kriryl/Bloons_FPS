@@ -8,6 +8,7 @@ public class BloonType : Bloon
     public bool On = true;
     public string bloonName = "Test Bloon";
     public float coinsOnDamage = 1f;
+    public int livesTakenOnHit = 1;
     public ParticleSystem popvfx;
 
     private void Update()
@@ -18,24 +19,28 @@ public class BloonType : Bloon
 
     private void OnParticleCollision(GameObject other)
     {
-        print("asfha");
         Damage damage = other.GetComponentInParent<Damage>();
-        print(damage != null);
         if (damage)
         {
             OnDamageTaken(damage.damage, coinsOnDamage);
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<Player>())
+        {
+            OnPlayerHit(livesTakenOnHit);
+        }
+    }
+
     public override void OnDamageTaken(int damageAmount, float coinsToAdd)
     {
-        print("damage");
         base.OnDamageTaken(damageAmount, coinsToAdd);
     }
 
     public override void SeekPlayer(float speed)
     {
-        print("Blon");
         base.SeekPlayer(speed);
     }
 

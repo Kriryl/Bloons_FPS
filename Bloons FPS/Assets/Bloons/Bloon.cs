@@ -4,6 +4,7 @@ using UnityEngine.AI;
 public class Bloon : MonoBehaviour
 {
     private Coins coin;
+    private Lives lives;
     private NavMeshAgent agent;
     private GameObject player;
     private BloonHealth health;
@@ -22,9 +23,15 @@ public class Bloon : MonoBehaviour
     private void Start()
     {
         coin = FindObjectOfType<Coins>();
+        lives = FindObjectOfType<Lives>();
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("Player");
         health = GetComponent<BloonHealth>();
+    }
+
+    public void OnPlayerHit(int amount)
+    {
+        lives.TakeLives(amount);
     }
 
     public virtual void SeekPlayer(float speed)
