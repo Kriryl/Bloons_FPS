@@ -62,6 +62,7 @@
     <Compile Include="Assets\General\Lives.cs" />
     <Compile Include="Assets\General\Upgrades.cs" />
     <Compile Include="Assets\General\Shop.cs" />
+    <Compile Include="Assets\Bloons\BloonSpawner.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
