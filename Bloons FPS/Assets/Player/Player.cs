@@ -48,4 +48,11 @@ public class Player : MonoBehaviour
             emission.rateOverTime = new ParticleSystem.MinMaxCurve(attackSpeed);
         }
     }
+
+    public void ApplyStats(int damage, float attackSpeed, float shotSpeed)
+    {
+        this.damage = damage;
+        this.attackSpeed = attackSpeed;
+        this.shotSpeed = shotSpeed;
+    }
 }
