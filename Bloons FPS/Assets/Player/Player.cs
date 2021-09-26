@@ -49,10 +49,10 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void ApplyStats(int damage, float attackSpeed, float shotSpeed)
+    public void IncreaseStats(int damage, float attackSpeed, float shotSpeed)
     {
-        this.damage = damage;
-        this.attackSpeed = attackSpeed;
-        this.shotSpeed = shotSpeed;
+        this.damage += damage;
+        this.attackSpeed += attackSpeed;
+        this.shotSpeed += shotSpeed;
     }
 }

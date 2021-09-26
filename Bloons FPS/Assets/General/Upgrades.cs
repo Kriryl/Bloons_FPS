@@ -6,6 +6,7 @@ using UnityEngine;
 public class Upgrades : MonoBehaviour
 {
     private Player player;
+    private Coins coins;
 
 #pragma warning disable IDE0090 // Use 'new(...)'
     public List<Upgrade> upgrades = new List<Upgrade>();
@@ -23,12 +24,30 @@ public class Upgrades : MonoBehaviour
     private void Start()
     {
         player = FindObjectOfType<Player>();
+        coins = FindObjectOfType<Coins>();
     }
 
-    public void Buy(int index)
+    public bool CheckCost(int index)
+    {
+        if (upgrades.Count - 1 < index) { return false; }
+        Upgrade upgrade = upgrades[index];
+        if (upgrade == null) { return false; }
+
+        int currentCoins = coins.coinAmount;
+        int cost = (int)upgrade.cost;
+
+        if (currentCoins >= cost)
+        {
+            Buy(index);
+            return true;
+        }
+        return false;
+    }
+
+    private void Buy(int index)
     {
         Upgrade upgrade = upgrades[index];
-        player.ApplyStats(upgrade.damage, upgrade.attackSpeed, upgrade.shotSpeed);
+        player.IncreaseStats(upgrade.damage, upgrade.attackSpeed, upgrade.shotSpeed);
         upgrades.Remove(upgrade);
     }
 }
