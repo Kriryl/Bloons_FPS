@@ -12,15 +12,15 @@ public class Coins : MonoBehaviour
         DisplayCoins();
     }
 
-    public void AddCoins(float amount)
+    public void AddCoins(int amount)
     {
-        coinAmount += (int)amount;
+        coinAmount += amount;
         DisplayCoins();
     }
 
-    public void LoseCoins(float cost)
+    public void LoseCoins(int cost)
     {
-        coinAmount -= (int)cost;
+        coinAmount -= cost;
         DisplayCoins();
     }
 

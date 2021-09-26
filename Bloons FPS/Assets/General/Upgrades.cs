@@ -38,6 +38,7 @@ public class Upgrades : MonoBehaviour
 
         if (currentCoins >= cost)
         {
+            coins.LoseCoins(cost);
             Buy(index);
             return true;
         }

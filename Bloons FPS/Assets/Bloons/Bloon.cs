@@ -43,7 +43,7 @@ public class Bloon : MonoBehaviour
         }
     }
 
-    public virtual void OnDamageTaken(int damageAmount, float coinsToAdd)
+    public virtual void OnDamageTaken(int damageAmount, int coinsToAdd)
     {
         coin.AddCoins(coinsToAdd);
         health.TakeDamage(damageAmount);

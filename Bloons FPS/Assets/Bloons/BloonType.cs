@@ -7,7 +7,7 @@ public class BloonType : Bloon
     public float speed = 5f;
     public bool On = true;
     public string bloonName = "Test Bloon";
-    public float coinsOnDamage = 1f;
+    public int coinsOnDamage = 1;
     public int livesTakenOnHit = 1;
     public ParticleSystem popvfx;
 
@@ -34,7 +34,7 @@ public class BloonType : Bloon
         }
     }
 
-    public override void OnDamageTaken(int damageAmount, float coinsToAdd)
+    public override void OnDamageTaken(int damageAmount, int coinsToAdd)
     {
         base.OnDamageTaken(damageAmount, coinsToAdd);
     }
