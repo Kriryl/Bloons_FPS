@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     [Tooltip("Damage of each projectile")] [SerializeField] private int damage = 1;
     [Tooltip("Number of projectiles per second")] [SerializeField] private float attackSpeed = 1f;
     [Tooltip("Start velocity of the projectile")] [SerializeField] private float shotSpeed = 30f;
-    [Tooltip("Not in use yet...")] [SerializeField] private float range = 10f;
+    [Tooltip("Projectile Lifetime")] [SerializeField] private float range = 10f;
     [SerializeField] private float accuracy = 2f;
     [SerializeField] private float projectileRadius = 0.1f;
 
@@ -37,14 +37,15 @@ public class Player : MonoBehaviour
     private void CalculateStats()
     {
         damageObject.damage = damage;
-        ShotSpeed();
+        ShotSpeedAndRange();
         AttackSpeed();
         Accuracy();
 
-        void ShotSpeed()
+        void ShotSpeedAndRange()
         {
             ParticleSystem.MainModule main = projectile.main;
             main.startSpeed = shotSpeed;
+            main.startLifetime = range;
         }
 
         void AttackSpeed()
@@ -61,11 +62,12 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void IncreaseStats(int damage, float attackSpeed, float shotSpeed, float projectileRadius, float accuracy)
+    public void IncreaseStats(int damage, float attackSpeed, float shotSpeed, float projectileRadius, float accuracy, float range)
     {
         this.damage += damage;
         this.attackSpeed += attackSpeed;
         this.shotSpeed += shotSpeed;
+        this.range += range;
         if (this.projectileRadius + projectileRadius >= 0)
         {
             this.projectileRadius += projectileRadius;

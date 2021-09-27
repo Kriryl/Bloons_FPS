@@ -21,6 +21,7 @@ public class Upgrades : MonoBehaviour
         public float shotSpeed = 0f;
         public float projectileRadius = 0f;
         public float accuracy = 0f;
+        public float range = 0f;
     }
 
     private void Start()
@@ -50,6 +51,6 @@ public class Upgrades : MonoBehaviour
     private void Buy(int index)
     {
         Upgrade upgrade = upgrades[index];
-        player.IncreaseStats(upgrade.damage, upgrade.attackSpeed, upgrade.shotSpeed, upgrade.projectileRadius, upgrade.accuracy);
+        player.IncreaseStats(upgrade.damage, upgrade.attackSpeed, upgrade.shotSpeed, upgrade.projectileRadius, upgrade.accuracy, upgrade.range);
     }
 }
