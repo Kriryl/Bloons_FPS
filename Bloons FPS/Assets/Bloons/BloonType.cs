@@ -46,7 +46,8 @@ public class BloonType : Bloon
 
     internal void OnDeath()
     {
-        Instantiate(popvfx, transform.position, transform.rotation);
+        GameObject pop = Instantiate(popvfx, transform.position, transform.rotation).gameObject;
+        Destroy(pop, 1f);
         SpawnChildren();
     }
 
