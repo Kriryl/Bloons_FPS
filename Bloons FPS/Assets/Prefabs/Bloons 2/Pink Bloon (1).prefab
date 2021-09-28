@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - {fileID: 6262457601200337897}
-  speed: 5
+  speed: 10
   On: 1
   bloonName: Green Bloon
   coinsOnDamage: 1

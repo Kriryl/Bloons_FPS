@@ -42933,7 +42933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - {fileID: 8916928085717205142}
-  speed: 3
+  speed: 5
   On: 1
   bloonName: Test Bloon
   coinsOnDamage: 1

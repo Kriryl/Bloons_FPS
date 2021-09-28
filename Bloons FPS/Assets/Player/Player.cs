@@ -72,7 +72,15 @@ public class Player : MonoBehaviour
         {
             this.projectileRadius += projectileRadius;
         }
-        if (this.accuracy + accuracy < 0) { return; }
+        else
+        {
+            this.projectileRadius = 0.001f;
+        }
+        if (this.accuracy + accuracy < 0)
+        {
+            this.accuracy = 0;
+            return;
+        }
         this.accuracy += accuracy;
     }
 }

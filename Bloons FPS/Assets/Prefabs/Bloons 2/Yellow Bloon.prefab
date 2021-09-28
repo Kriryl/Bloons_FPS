@@ -73,7 +73,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   children:
   - {fileID: 5930436785206782256}
-  speed: 4
+  speed: 8
   On: 1
   bloonName: Yellow Bloon
   coinsOnDamage: 1

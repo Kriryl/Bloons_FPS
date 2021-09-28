@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   children: []
-  speed: 1
+  speed: 2
   On: 1
   bloonName: Test Bloon
   coinsOnDamage: 1
