@@ -18,13 +18,6 @@ public class BloonType : Bloon
         SeekPlayer(speed);
     }
 
-    private void OnEnable()
-    {
-        BloonHealth = GetComponent<BloonHealth>();
-        print(BloonHealth);
-        BloonHealth.TakeDamage(damageLeft);
-    }
-
     private void OnParticleCollision(GameObject other)
     {
         Damage damage = other.GetComponentInParent<Damage>();
@@ -44,14 +37,12 @@ public class BloonType : Bloon
 
     public override void OnDamageTaken(int damageAmount, int coinsToAdd)
     {
-        if (Health <= damageAmount)
+        BloonHealth = GetComponent<BloonHealth>();
+        if (damageAmount > BloonHealth.health)
         {
-            foreach (BloonType bloonType in children)
-            {
-                bloonType.TakeOverDamage(damageAmount - Health);
-            }
+            damageLeft = damageAmount - Health;
         }
-        base.OnDamageTaken(damageAmount, coinsToAdd);
+        base.OnDamageTaken(damageAmount, damageAmount);
     }
 
     public override void SeekPlayer(float speed)
@@ -59,16 +50,38 @@ public class BloonType : Bloon
         base.SeekPlayer(speed);
     }
 
-    public void TakeOverDamage(int damage)
-    {
-        damageLeft = damage;
-    }
-
     internal void OnDeath()
     {
+        if (damageLeft > 0)
+        {
+            for (int i = damageLeft; i > 0; i--)
+            {
+                OverKill();
+            }
+        }
         GameObject pop = Instantiate(popvfx, transform.position, transform.rotation).gameObject;
         Destroy(pop, 1f);
         SpawnChildren();
+    }
+
+    private void OverKill()
+    {
+        for (int i = 0; i < children.Length; i++)
+        {
+            if (children.Length > 0)
+            {
+                BloonType bloonType = children[i];
+                if (bloonType.children.Length > 0)
+                {
+                    children[i] = bloonType.children[i];
+                }
+                else
+                {
+                    Destroy(children[i].gameObject);
+                    Destroy(gameObject);
+                }
+            }
+        }
     }
 
     private void SpawnChildren()

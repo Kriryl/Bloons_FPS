@@ -46,7 +46,14 @@ public class Bloon : MonoBehaviour
 
     public virtual void OnDamageTaken(int damageAmount, int coinsToAdd)
     {
-        coin.AddCoins(coinsToAdd);
+        try
+        {
+            coin.AddCoins(coinsToAdd);
+        }
+        catch
+        {
+            print("waht");
+        }
         BloonHealth.TakeDamage(damageAmount);
     }
 }
