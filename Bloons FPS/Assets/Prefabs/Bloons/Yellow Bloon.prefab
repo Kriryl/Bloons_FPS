@@ -42936,7 +42936,9 @@ MonoBehaviour:
   On: 1
   bloonName: Yellow Bloon
   coinsOnDamage: 1
+  livesTakenOnHit: 1
   popvfx: {fileID: 2891127767421277930, guid: 6cc278c638d244c4aa33f163bb6f6ac2, type: 3}
+  damageLeft: 0
 --- !u!114 &1218198146106536479
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,10 +7,11 @@ public class Bloon : MonoBehaviour
     private Lives lives;
     private NavMeshAgent agent;
     private GameObject player;
-    private BloonHealth health;
     private bool isOn = true;
 
-    public int Health => health.health;
+    public int Health => BloonHealth.health;
+
+    public BloonHealth BloonHealth { get; set; }
 
     public bool IsOn
     {
@@ -26,7 +27,7 @@ public class Bloon : MonoBehaviour
         lives = FindObjectOfType<Lives>();
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.Find("Player");
-        health = GetComponent<BloonHealth>();
+        BloonHealth = GetComponent<BloonHealth>();
     }
 
     public void OnPlayerHit(int amount)
@@ -46,6 +47,6 @@ public class Bloon : MonoBehaviour
     public virtual void OnDamageTaken(int damageAmount, int coinsToAdd)
     {
         coin.AddCoins(coinsToAdd);
-        health.TakeDamage(damageAmount);
+        BloonHealth.TakeDamage(damageAmount);
     }
 }

@@ -18,6 +18,5 @@ public class BloonHealth : MonoBehaviour
     public void Die()
     {
         BroadcastMessage("OnDeath");
-        Destroy(gameObject);
     }
 }
