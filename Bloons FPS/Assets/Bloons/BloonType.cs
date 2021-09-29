@@ -73,7 +73,10 @@ public class BloonType : Bloon
                 BloonType bloonType = children[i];
                 if (bloonType.children.Length > 0)
                 {
-                    children[i] = bloonType.children[i];
+                    for (int child = 0; child < bloonType.children.Length; child++)
+                    {
+                        children[i] = bloonType.children[child];
+                    }
                 }
                 else
                 {
