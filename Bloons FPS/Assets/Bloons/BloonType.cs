@@ -10,6 +10,7 @@ public class BloonType : Bloon
     public int coinsOnDamage = 1;
     public int livesTakenOnHit = 1;
     public ParticleSystem popvfx;
+    [HideInInspector()]
     public int damageLeft = 0;
 
     private void Update()
