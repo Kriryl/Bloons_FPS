@@ -42939,6 +42939,7 @@ MonoBehaviour:
   coinsOnDamage: 1
   livesTakenOnHit: 1
   popvfx: {fileID: 2891127767421277930, guid: 6cc278c638d244c4aa33f163bb6f6ac2, type: 3}
+  popsfx: {fileID: 8300000, guid: c15a754ff3cc61a4daf0cf2f393f38e2, type: 3}
   damageLeft: 0
 --- !u!114 &977332599902067856
 MonoBehaviour:
@@ -43035,7 +43036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186965638821557428, guid: f77ca8ca8dbc7d745b96e3cee142506d, type: 3}
       propertyPath: m_VersionIndex
-      value: 2078
+      value: 2084
       objectReference: {fileID: 0}
     - target: {fileID: 8186965639846753797, guid: f77ca8ca8dbc7d745b96e3cee142506d, type: 3}
       propertyPath: m_Mesh
@@ -43047,7 +43048,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8186965639846753798, guid: f77ca8ca8dbc7d745b96e3cee142506d, type: 3}
       propertyPath: m_VersionIndex
-      value: 1584
+      value: 1590
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f77ca8ca8dbc7d745b96e3cee142506d, type: 3}
