@@ -15,11 +15,11 @@ C:/Unity Programmering/Repos_3D/Bloons FPS/Bloons_FPS/Bloons FPS
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49702
+60444
 Successfully changed project path to: C:/Unity Programmering/Repos_3D/Bloons FPS/Bloons_FPS/Bloons FPS
 C:/Unity Programmering/Repos_3D/Bloons FPS/Bloons_FPS/Bloons FPS
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 96.42 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 96.81 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.1.17f1 (03b40fe07a36)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/Resources/UnitySubsystems
@@ -35,94 +35,94 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56460
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56520
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.1.17f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002740 seconds.
+Registered in 0.002772 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 100.78 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 103.67 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.522 seconds
+- Completed reload, in  1.535 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1522ms)
-		BeginReloadAssembly (70ms)
+	ReloadAssembly (1535ms)
+		BeginReloadAssembly (68ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (499ms)
-			LoadAssemblies (68ms)
+		EndReloadAssembly (511ms)
+			LoadAssemblies (66ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (171ms)
+			SetupTypeCache (175ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (248ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (255ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (101ms)
+				RefreshPlugins (104ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (105ms)
-				ProcessInitializeOnLoadMethodAttributes (34ms)
+				ProcessInitializeOnLoadAttributes (110ms)
+				ProcessInitializeOnLoadMethodAttributes (32ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006761 seconds.
+Registered in 0.006835 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\Unity Programmering\Repos_3D\Bloons FPS\Bloons_FPS\Bloons FPS\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\Unity Programmering\Repos_3D\Bloons FPS\Bloons_FPS\Bloons FPS\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.72 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.420 seconds
+- Completed reload, in  1.437 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1421ms)
-		BeginReloadAssembly (168ms)
+	ReloadAssembly (1438ms)
+		BeginReloadAssembly (172ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (1183ms)
-			LoadAssemblies (104ms)
+		EndReloadAssembly (1197ms)
+			LoadAssemblies (107ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (363ms)
+			SetupTypeCache (367ms)
 			ReleaseScriptCaches (1ms)
 			RebuildScriptCaches (54ms)
-			SetupLoadedEditorAssemblies (566ms)
+			SetupLoadedEditorAssemblies (571ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
-				SetLoadedEditorAssemblies (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (79ms)
-				ProcessInitializeOnLoadAttributes (465ms)
-				ProcessInitializeOnLoadMethodAttributes (5ms)
+				BeforeProcessingInitializeOnLoad (80ms)
+				ProcessInitializeOnLoadAttributes (467ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
 				AfterProcessingInitializeOnLoad (10ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3486 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 155.3 MB.
 System memory in use after: 155.2 MB.
 
 Unloading 101 unused Assets to reduce memory usage. Loaded Objects now: 3943.
-Total: 4.009700 ms (FindLiveObjects: 0.297500 ms CreateObjectMapping: 0.088400 ms MarkObjects: 3.240200 ms  DeleteObjects: 0.382400 ms)
+Total: 4.540500 ms (FindLiveObjects: 0.280700 ms CreateObjectMapping: 0.084800 ms MarkObjects: 3.785200 ms  DeleteObjects: 0.388900 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -137,24 +137,177 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/Sound
-  artifactKey: Guid(b75f282fc03b9bc4e9e044c11c35349d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sound using Guid(b75f282fc03b9bc4e9e044c11c35349d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59a9c826599b2f5cc133537e09aa413e') in 0.011330 seconds 
+  path: Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab
+  artifactKey: Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab using Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bbc24da20d89de3d7290fd8b93b7775') in 0.210086 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 72.938163 seconds.
-  path: Assets/Sound/moab_damage_quieter.wav
-  artifactKey: Guid(b88a58e4659960c4e9a32c79520570bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sound/moab_damage_quieter.wav using Guid(b88a58e4659960c4e9a32c79520570bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f38a30107b3d5463ec25606fb899c2e') in 0.139086 seconds 
+  Time since last request: 15.559544 seconds.
+  path: Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab
+  artifactKey: Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab using Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8a934ff00a112d1efd5498d1e00e2dd') in 0.134752 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 27.167586 seconds.
-  path: Assets/Sound/pop1.wav
-  artifactKey: Guid(c15a754ff3cc61a4daf0cf2f393f38e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sound/pop1.wav using Guid(c15a754ff3cc61a4daf0cf2f393f38e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5552b08c7bcc36d6675be207d3d724a4') in 0.017354 seconds 
+  Time since last request: 66.688828 seconds.
+  path: Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab
+  artifactKey: Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab using Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '669d52730d1eb7f8d6e14f828db00e12') in 0.136573 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 21.721719 seconds.
-  path: Assets/Sound/moab_destroyed_short.wav
-  artifactKey: Guid(224077c55692104488003b510f909cb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Sound/moab_destroyed_short.wav using Guid(224077c55692104488003b510f909cb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd663477639cf71aae0455194000cdee') in 0.017968 seconds 
+  Time since last request: 11.708113 seconds.
+  path: Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab
+  artifactKey: Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab using Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a22bd14a65d9e9fb499a3592c9fefd6') in 0.142004 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.298213 seconds.
+  path: Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab
+  artifactKey: Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab using Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cbb9463e1c4df6604c8f2dd4c1d09f1') in 0.151764 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.291606 seconds.
+  path: Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab
+  artifactKey: Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab using Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dba773c4ed65eb2f024356ac444cf2f8') in 0.156790 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.788534 seconds.
+  path: Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab
+  artifactKey: Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab using Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '609219074b5814d39bfc1fff59159bf5') in 0.140062 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.438055 seconds.
+  path: Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab
+  artifactKey: Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab using Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e94c542db89902c8b5ace106c7945fb') in 0.141385 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1688.275134 seconds.
+  path: Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab
+  artifactKey: Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab using Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7fb81f4fd96c532bbf491c0f32244fc') in 0.145665 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.595732 seconds.
+  path: Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab
+  artifactKey: Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab using Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e08e5488962ad650f1aca1445494197c') in 0.111031 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.794142 seconds.
+  path: Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab
+  artifactKey: Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab using Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6f5e887381ecb60ea84068c3733ea5b') in 0.076861 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.183909 seconds.
+  path: Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab
+  artifactKey: Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bloons 2/Special Bloons/Rainbow Bloon.prefab using Guid(6c364545277d0c54ba66b873c66c2f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8864fb849e9dc1aad214045fb47ffdb') in 0.074652 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.553407 seconds.
+  path: Assets/Prefabs/Bloons 2/Pink Bloon (1).prefab
+  artifactKey: Guid(2ea6cb36f22ace2448f20b46fc8cc5f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bloons 2/Pink Bloon (1).prefab using Guid(2ea6cb36f22ace2448f20b46fc8cc5f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b0f14926efc74161ccae16b4d7cd80f') in 0.043422 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Prefabs/Bloons 2/Yellow Bloon.prefab
+  artifactKey: Guid(5e96a147266ef094483e0acee7e60d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bloons 2/Yellow Bloon.prefab using Guid(5e96a147266ef094483e0acee7e60d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b912051011a46962adb4ea957d503deb') in 0.035597 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.090925 seconds.
+  path: Assets/Prefabs/Bloons 2/Pink Bloon (1).prefab
+  artifactKey: Guid(2ea6cb36f22ace2448f20b46fc8cc5f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bloons 2/Pink Bloon (1).prefab using Guid(2ea6cb36f22ace2448f20b46fc8cc5f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '235d286e68b0dd7b18bdc39f4834b41e') in 0.038607 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.051274 seconds.
+  path: Assets/Prefabs/Bloons 2/Green Bloon.prefab
+  artifactKey: Guid(9cffdafc2f178d54ba9cd91222f5fda7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bloons 2/Green Bloon.prefab using Guid(9cffdafc2f178d54ba9cd91222f5fda7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f79cd97d64593372c318f1b07eddf9f1') in 0.026692 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Prefabs/Bloons 2/Pink Bloon (1).prefab
+  artifactKey: Guid(2ea6cb36f22ace2448f20b46fc8cc5f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bloons 2/Pink Bloon (1).prefab using Guid(2ea6cb36f22ace2448f20b46fc8cc5f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e60d7a9ceb11ba82b488d5db0e77e70b') in 0.039152 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/Prefabs/Bloons 2/Yellow Bloon.prefab
+  artifactKey: Guid(5e96a147266ef094483e0acee7e60d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Bloons 2/Yellow Bloon.prefab using Guid(5e96a147266ef094483e0acee7e60d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc0c3e5e09773a9e196367b2b26d4e28') in 0.032747 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.085302 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Unity Programmering\Repos_3D\Bloons FPS\Bloons_FPS\Bloons FPS\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Unity Programmering\Repos_3D\Bloons FPS\Bloons_FPS\Bloons FPS\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Warning: Annotation not found!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.ProBuilder.EditorUtility:SetGizmoIconEnabled (System.Type,bool) (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs:575)
+UnityEditor.ProBuilder.HierarchyListener:.cctor () (at Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/HierarchyListener.cs:21)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+[Library/PackageCache/com.unity.probuilder@5.0.3/Editor/EditorCore/EditorUtility.cs line 575]
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.352 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1353ms)
+		BeginReloadAssembly (144ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (39ms)
+		EndReloadAssembly (1138ms)
+			LoadAssemblies (103ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (378ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (507ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (63ms)
+				ProcessInitializeOnLoadAttributes (424ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3412 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 149.6 MB.
+System memory in use after: 149.5 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 3945.
+Total: 4.013200 ms (FindLiveObjects: 0.321700 ms CreateObjectMapping: 0.089500 ms MarkObjects: 3.343500 ms  DeleteObjects: 0.257100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
