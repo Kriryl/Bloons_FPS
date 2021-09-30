@@ -48,6 +48,21 @@ public class Upgrades : MonoBehaviour
         return false;
     }
 
+    public bool CanAfford(Upgrade upgrade)
+    {
+        coins = FindObjectOfType<Coins>();
+        int currentCoins = coins.coinAmount;
+        int cost = (int)upgrade.cost;
+        if (currentCoins >= cost)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     private void Buy(int index)
     {
         Upgrade upgrade = upgrades[index];

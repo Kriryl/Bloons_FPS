@@ -4,45 +4,61 @@ using TMPro;
 public class Shop : MonoBehaviour
 {
     public const KeyCode INTERACT = KeyCode.E;
-    public int buyIndex = 0;
     public float interactDistance = 3f;
+    public bool isOpen = false;
 
     public TextMeshProUGUI interactText;
+    public Canvas shopCanvas;
 
-    Upgrades upgrades;
     Player player;
 
     private float distanceFromPlayer = float.MaxValue;
 
     private void Start()
     {
-        upgrades = FindObjectOfType<Upgrades>();
         player = FindObjectOfType<Player>();
         interactText.enabled = false;
+        shopCanvas.gameObject.SetActive(false);
     }
 
     private void Update()
     {
-        distanceFromPlayer = Vector3.Distance(player.transform.position, transform.position);
-        if (distanceFromPlayer <= interactDistance)
+        if (!isOpen)
         {
-            interactText.enabled = true;
-            if (Input.GetKeyDown(INTERACT))
+            distanceFromPlayer = Vector3.Distance(player.transform.position, transform.position);
+            if (distanceFromPlayer <= interactDistance)
             {
-                BuyItem();
+                interactText.enabled = true;
+                if (Input.GetKeyDown(INTERACT))
+                {
+                    OpenShop();
+                }
+            }
+            else
+            {
+                interactText.enabled = false;
             }
         }
-        else
+        else if (isOpen)
         {
-            interactText.enabled = false;
+            if (Input.GetKeyDown(INTERACT))
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                isOpen = false;
+                shopCanvas.gameObject.SetActive(false);
+                Cursor.visible = false;
+                Time.timeScale = 1f;
+            }
         }
     }
 
-    private void BuyItem()
+    private void OpenShop()
     {
-        if (upgrades.CheckCost(buyIndex))
-        {
-            buyIndex++;
-        }
+        isOpen = true;
+        shopCanvas.gameObject.SetActive(true);
+        interactText.enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        Time.timeScale = 0f;
     }
 }
