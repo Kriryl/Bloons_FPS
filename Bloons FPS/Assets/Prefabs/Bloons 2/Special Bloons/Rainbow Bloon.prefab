@@ -80,7 +80,6 @@ MonoBehaviour:
   coinsOnDamage: 1
   livesTakenOnHit: 1
   popvfx: {fileID: 2891127767421277930, guid: 6cc278c638d244c4aa33f163bb6f6ac2, type: 3}
-  popsfx: {fileID: 8300000, guid: c15a754ff3cc61a4daf0cf2f393f38e2, type: 3}
   damageLeft: 0
 --- !u!114 &6732150753154385626
 MonoBehaviour:
@@ -95,6 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  popsfx: {fileID: 8300000, guid: c15a754ff3cc61a4daf0cf2f393f38e2, type: 3}
+  damagesfx: {fileID: 0}
 --- !u!135 &6732150753154385627
 SphereCollider:
   m_ObjectHideFlags: 0

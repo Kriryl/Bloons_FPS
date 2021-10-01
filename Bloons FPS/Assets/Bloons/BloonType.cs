@@ -10,7 +10,6 @@ public class BloonType : Bloon
     public int coinsOnDamage = 1;
     public int livesTakenOnHit = 1;
     public ParticleSystem popvfx;
-    public AudioClip popsfx;
     [HideInInspector()]
     public int damageLeft = 0;
 
@@ -96,7 +95,6 @@ public class BloonType : Bloon
             bloonType.transform.parent = null;
             bloonType.gameObject.SetActive(true);
         }
-        AudioSource.PlayClipAtPoint(popsfx, transform.position);
         Destroy(gameObject);
     }
 }

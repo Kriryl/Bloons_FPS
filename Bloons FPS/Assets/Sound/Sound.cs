@@ -2,22 +2,17 @@ using UnityEngine;
 
 public class Sound : MonoBehaviour
 {
-    public AudioClip audioClip;
+    public AudioClip popSFX;
+    public AudioClip damageSFX;
 
-    private AudioSource audioSource;
-
-    private void Start()
+    public void OnBloonSpawn()
     {
-        audioSource = GetComponent<AudioSource>();
-    }
+        BloonHealth[] bloonHealths = FindObjectsOfType<BloonHealth>();
 
-    internal void PlaySound()
-    {
-        audioSource.Play();
-    }
-
-    internal void PlayInWorld()
-    {
-        AudioSource.PlayClipAtPoint(audioClip, transform.position);
+        foreach (BloonHealth bloonHealth in bloonHealths)
+        {
+            bloonHealth.popsfx = popSFX;
+            bloonHealth.popsfx = popSFX;
+        }
     }
 }
