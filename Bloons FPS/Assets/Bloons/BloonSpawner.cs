@@ -8,6 +8,9 @@ public class BloonSpawner : MonoBehaviour
 
     public float interval = 5f;
     public float startDelay = 2f;
+    public float rampPace = 1f;
+    public float rampStart = 60f;
+    public bool hasRamped = false;
 
     private int poolSize;
 
@@ -17,9 +20,31 @@ public class BloonSpawner : MonoBehaviour
         InvokeRepeating(nameof(SpawnBloon), startDelay, interval);
     }
 
+    private void Update()
+    {
+        if (hasRamped) { return; }
+        if (Time.timeSinceLevelLoad >= rampStart)
+        {
+            StartCoroutine(Ramp());
+        }
+    }
+
     private void SpawnBloon()
     {
         int randomNum = Random.Range(0, poolSize);
         _ = Instantiate(bloonPool[randomNum], transform.position, transform.rotation);
+    }
+
+
+    private IEnumerator Ramp()
+    {
+        hasRamped = true;
+        CancelInvoke();
+        while (interval > 1f)
+        {
+            SpawnBloon();
+            interval *= 0.99f;
+            yield return new WaitForSeconds(interval);
+        }
     }
 }
