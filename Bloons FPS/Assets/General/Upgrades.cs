@@ -67,6 +67,11 @@ public class Upgrades : MonoBehaviour
 
     private void Buy(int index)
     {
+        ShopItem[] shopItems = FindObjectsOfType<ShopItem>();
+        foreach (ShopItem shopItem in shopItems)
+        {
+            shopItem.Display();
+        }
         Upgrade upgrade = upgrades[index];
         player.IncreaseStats(upgrade.damage, upgrade.attackSpeed, upgrade.shotSpeed, upgrade.projectileRadius, upgrade.accuracy, upgrade.range);
     }

@@ -25,11 +25,6 @@ public class ShopItem : MonoBehaviour
         cost = upgrade.cost;
     }
 
-    private void OnEnable()
-    {
-        DisplayColor();
-    }
-
     public void BuyItem()
     {
         if (!isLocked)
@@ -39,15 +34,15 @@ public class ShopItem : MonoBehaviour
                 print($"Succesfully bought {upgradeName}");
             }
         }
-        DisplayColor();
+        Display();
     }
 
-    private void DisplayColor()
+    public void Display()
     {
-        startColor = Color.green;
         upgrades = FindObjectOfType<Upgrades>();
         upgrade = upgrades.upgrades[shopIndex];
-        print(upgrades.CanAfford(upgrade));
+        cost = upgrade.cost;
+        startColor = Color.green;
         costText.text = $"${cost}";
         if (upgrades.CanAfford(upgrade))
         {

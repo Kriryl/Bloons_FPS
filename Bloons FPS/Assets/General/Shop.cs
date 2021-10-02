@@ -54,6 +54,11 @@ public class Shop : MonoBehaviour
 
     private void OpenShop()
     {
+        ShopItem[] shopItems = FindObjectsOfType<ShopItem>(true);
+        foreach (ShopItem shopItem in shopItems)
+        {
+            shopItem.Display();
+        }
         isOpen = true;
         shopCanvas.gameObject.SetActive(true);
         interactText.enabled = false;
