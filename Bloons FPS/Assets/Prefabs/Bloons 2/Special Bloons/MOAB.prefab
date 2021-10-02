@@ -77049,7 +77049,7 @@ MonoBehaviour:
   On: 1
   bloonName: MOAB
   coinsOnDamage: 1
-  livesTakenOnHit: 1
+  livesTakenOnHit: 120
   popvfx: {fileID: 2891127767421277930, guid: 6cc278c638d244c4aa33f163bb6f6ac2, type: 3}
   damageLeft: 0
 --- !u!114 &2945165582858243251

@@ -36,9 +36,10 @@ public class ShopItem : MonoBehaviour
         {
             if (upgrades.CheckCost(shopIndex))
             {
-                isLocked = true;
+                print($"Succesfully bought {upgradeName}");
             }
         }
+        DisplayColor();
     }
 
     private void DisplayColor()

@@ -39,6 +39,7 @@ public class Bloon : MonoBehaviour
     public void OnPlayerHit(int amount)
     {
         lives.TakeLives(amount);
+        Destroy(gameObject);
     }
 
     public virtual void SeekPlayer(float speed)

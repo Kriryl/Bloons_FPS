@@ -11,6 +11,7 @@ public class Upgrades : MonoBehaviour
 #pragma warning disable IDE0090 // Use 'new(...)'
     public List<Upgrade> upgrades = new List<Upgrade>();
 #pragma warning restore IDE0090 // Use 'new(...)'
+    public float costIncrease = 1.3f;
 
     [Serializable]
     public class Upgrade
@@ -42,6 +43,7 @@ public class Upgrades : MonoBehaviour
         if (currentCoins >= cost)
         {
             coins.LoseCoins(cost);
+            upgrade.cost *= costIncrease;
             Buy(index);
             return true;
         }
