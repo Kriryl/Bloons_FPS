@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 1184263106091831909}
   - component: {fileID: 1184263106091831915}
   - component: {fileID: 1184263106091831908}
-  - component: {fileID: 1184263106091831914}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -111,7 +110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184263106091831910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.591}
+  m_LocalPosition: {x: 0, y: 0, z: 0.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1184263105132970039}
@@ -253,7 +252,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 30
+      scalar: 5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -528,7 +527,7 @@ ParticleSystem:
     startRotationX:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1.5707963
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -688,7 +687,7 @@ ParticleSystem:
     maxNumParticles: 1000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
-    rotation3D: 0
+    rotation3D: 1
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
@@ -746,7 +745,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 1
+    angle: 0
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -832,7 +831,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.1
+      value: 0.0001
       mode: 0
       spread: 0
       speed:
@@ -1329,7 +1328,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.7853982
+      scalar: 2.984513
       minScalar: 0.7853982
       maxCurve:
         serializedVersion: 2
@@ -3577,7 +3576,7 @@ ParticleSystem:
     curve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.7853982
+      scalar: 0
       minScalar: 0.7853982
       maxCurve:
         serializedVersion: 2
@@ -3627,7 +3626,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    separateAxes: 0
+    separateAxes: 1
     range: {x: 0, y: 1}
   ColorBySpeedModule:
     enabled: 0
@@ -4845,7 +4844,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b4bfbdb746dced44488eea85d7a5db56, type: 2}
+  - {fileID: -4746425084474043165, guid: 34e910e3fb34dc048b3c598f9369f8e6, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4876,7 +4875,7 @@ ParticleSystemRenderer:
   m_SortingFudge: 0
   m_NormalDirection: 1
   m_ShadowBias: 0
-  m_RenderAlignment: 0
+  m_RenderAlignment: 4
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
   m_UseCustomVertexStreams: 0
@@ -4886,24 +4885,11 @@ ParticleSystemRenderer:
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 6528356924907794671, guid: 34e910e3fb34dc048b3c598f9369f8e6, type: 3}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &1184263106091831914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1184263106091831910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7640a850d8faf84438a9adba3061bdf9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
 --- !u!1 &1184263106952911170
 GameObject:
   m_ObjectHideFlags: 0
@@ -5002,10 +4988,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.2822137
-  m_Height: 1.7909256
+  m_Radius: 0.50808954
+  m_Height: 1.9530125
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.019420624, z: -0.01245451}
 --- !u!54 &1184263106952911172
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5037,8 +5023,8 @@ MonoBehaviour:
   cam: {fileID: 1184263105132970032}
   movementSettings:
     ForwardSpeed: 4
-    BackwardSpeed: 2
-    StrafeSpeed: 2
+    BackwardSpeed: 4
+    StrafeSpeed: 4
     RunMultiplier: 2
     RunKey: 304
     JumpForce: 5
@@ -5089,7 +5075,7 @@ MonoBehaviour:
     groundCheckDistance: 0.01
     stickToGroundHelperDistance: 0.5
     slowDownRate: 20
-    airControl: 1
+    airControl: 0
     shellOffset: 0
 --- !u!114 &1184263106952911179
 MonoBehaviour:
@@ -5119,5 +5105,7 @@ MonoBehaviour:
   projectile: {fileID: 1184263106091831915}
   damage: 1
   attackSpeed: 1
-  shotSpeed: 100
-  range: 10
+  shotSpeed: 20
+  range: 0.5
+  accuracy: 2
+  projectileRadius: 0.2

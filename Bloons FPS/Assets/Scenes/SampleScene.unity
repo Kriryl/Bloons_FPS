@@ -3066,53 +3066,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1184263106091831909, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1184263106091831915, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
-      propertyPath: ShapeModule.angle
+    - target: {fileID: 1184263106091831908, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
+      propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1184263106091831908, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b4bfbdb746dced44488eea85d7a5db56, type: 2}
     - target: {fileID: 1184263106091831915, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 0.0001
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1184263106952911169, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
-      propertyPath: m_Height
-      value: 1.9530125
+    - target: {fileID: 1184263106091831915, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1184263106952911169, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
-      propertyPath: m_Radius
-      value: 0.50808954
-      objectReference: {fileID: 0}
-    - target: {fileID: 1184263106952911169, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
-      propertyPath: m_Center.y
-      value: 0.019420624
-      objectReference: {fileID: 0}
-    - target: {fileID: 1184263106952911169, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
-      propertyPath: m_Center.z
-      value: -0.01245451
+    - target: {fileID: 1184263106091831915, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1184263106952911170, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1184263106952911173, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
-      propertyPath: advancedSettings.airControl
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1184263106952911173, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
-      propertyPath: advancedSettings.shellOffset
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1184263106952911173, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
-      propertyPath: movementSettings.StrafeSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1184263106952911173, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
-      propertyPath: movementSettings.BackwardSpeed
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1184263106952911174, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
       propertyPath: m_RootOrder
@@ -3158,32 +3134,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1184263106952911178, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
-      propertyPath: range
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1184263106952911178, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1184263106952911178, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
-      propertyPath: accuracy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1184263106952911178, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
-      propertyPath: shotSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1184263106952911178, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
-      propertyPath: attackSpeed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1184263106952911178, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
-      propertyPath: projectileRadius
-      value: 0.2
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1184263106091831914, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
 --- !u!1001 &5171141429653624702
 PrefabInstance:
