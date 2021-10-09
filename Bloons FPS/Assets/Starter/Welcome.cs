@@ -37,6 +37,7 @@ public class Welcome : MonoBehaviour
     {
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         loadingProcces = asyncOperation.progress;
+        loading = true;
         asyncOperation.allowSceneActivation = true;
     }
 }

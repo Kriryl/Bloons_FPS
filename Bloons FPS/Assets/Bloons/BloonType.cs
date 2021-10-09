@@ -12,6 +12,7 @@ public class BloonType : Bloon
     public ParticleSystem popvfx;
     [HideInInspector()]
     public int damageLeft = 0;
+    public bool affectsChildren = true;
 
     private void Update()
     {
@@ -53,7 +54,7 @@ public class BloonType : Bloon
 
     internal void OnDeath()
     {
-        if (damageLeft > 0)
+        if (damageLeft > 0 && affectsChildren)
         {
             for (int i = damageLeft; i > 0; i--)
             {

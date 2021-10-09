@@ -77052,6 +77052,7 @@ MonoBehaviour:
   livesTakenOnHit: 120
   popvfx: {fileID: 2891127767421277930, guid: 6cc278c638d244c4aa33f163bb6f6ac2, type: 3}
   damageLeft: 0
+  affectsChildren: 0
 --- !u!114 &2945165582858243251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77064,7 +77065,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fba5bab523a66f74b8229ac52a6f6cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 100
   popsfx: {fileID: 8300000, guid: 224077c55692104488003b510f909cb4, type: 3}
   damagesfx: {fileID: 8300000, guid: b88a58e4659960c4e9a32c79520570bc, type: 3}
 --- !u!195 &2945165582858243250

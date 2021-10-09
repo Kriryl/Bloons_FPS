@@ -6,12 +6,10 @@ public class Lives : MonoBehaviour
     public int lives = 200;
     public TextMeshProUGUI livesText;
     DeathController deathController;
-    Difficulty difficulty;
 
     private void OnEnable()
     {
         deathController = FindObjectOfType<DeathController>();
-        difficulty = FindObjectOfType<Difficulty>();
         SetDifficultyLives();
         DisplayLives();
     }
@@ -28,7 +26,8 @@ public class Lives : MonoBehaviour
 
     private void SetDifficultyLives()
     {
-        lives = difficulty.GetStartingHealth();
+        int retrievedLives = Difficulty.GetStartingHealth();
+        lives = retrievedLives <= 0 ? 150 : Difficulty.GetStartingHealth();
     }
 
     public void DisplayLives()

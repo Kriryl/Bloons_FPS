@@ -2,48 +2,31 @@ using UnityEngine;
 
 public class Difficulty : MonoBehaviour
 {
+    public const string DIFFICULTY = "Difficulty";
+
     public const int EASY_MODE_HEALTH = 200;
     public const int NORMAL_MODE_HEALTH = 150;
     public const int HARD_MODE_HEALTH = 1;
-
-    public enum DifficultyMode { easy, normal, hard }
-
-    public DifficultyMode CurrentDifficulty { get; private set; }
 
     public void SelectDifficulty(string difficulty)
     {
         if (difficulty.ToLower() == "easy")
         {
-            CurrentDifficulty = DifficultyMode.easy;
+            PlayerPrefs.SetInt(DIFFICULTY, EASY_MODE_HEALTH);
         }
         else if (difficulty.ToLower() == "normal")
         {
-            CurrentDifficulty = DifficultyMode.normal;
+            PlayerPrefs.SetInt(DIFFICULTY, NORMAL_MODE_HEALTH);
         }
         else if (difficulty.ToLower() == "hard")
         {
-            CurrentDifficulty = DifficultyMode.hard;
+            PlayerPrefs.SetInt(DIFFICULTY, HARD_MODE_HEALTH);
         }
         BroadcastMessage("OnDifficultySelect");
     }
 
-    public int GetStartingHealth()
+    public static int GetStartingHealth()
     {
-        if (CurrentDifficulty == DifficultyMode.easy)
-        {
-            return EASY_MODE_HEALTH;
-        }
-        else if (CurrentDifficulty == DifficultyMode.normal)
-        {
-            return NORMAL_MODE_HEALTH;
-        }
-        else if (CurrentDifficulty == DifficultyMode.normal)
-        {
-            return HARD_MODE_HEALTH;
-        }
-        else
-        {
-            return NORMAL_MODE_HEALTH;
-        }
+        return PlayerPrefs.GetInt(DIFFICULTY);
     }
 }
