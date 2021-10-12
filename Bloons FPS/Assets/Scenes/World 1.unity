@@ -313,7 +313,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6930261065769212326, guid: 73dd8ee12a9c8a54ebe24d31d8d15474, type: 3}
       propertyPath: interval
-      value: 60
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6930261065769212326, guid: 73dd8ee12a9c8a54ebe24d31d8d15474, type: 3}
       propertyPath: rampStart
@@ -768,7 +768,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6930261065769212326, guid: 73dd8ee12a9c8a54ebe24d31d8d15474, type: 3}
       propertyPath: interval
-      value: 60
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 6930261065769212326, guid: 73dd8ee12a9c8a54ebe24d31d8d15474, type: 3}
       propertyPath: rampStart
@@ -776,7 +776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6930261065769212326, guid: 73dd8ee12a9c8a54ebe24d31d8d15474, type: 3}
       propertyPath: startDelay
-      value: 300
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 6930261065769212326, guid: 73dd8ee12a9c8a54ebe24d31d8d15474, type: 3}
       propertyPath: bloonPool.Array.size
@@ -1325,6 +1325,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1184263106952911178, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
+      propertyPath: shotSpeed
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
 --- !u!1001 &1190693241996454074
@@ -1547,7 +1551,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6930261065769212326, guid: 73dd8ee12a9c8a54ebe24d31d8d15474, type: 3}
       propertyPath: interval
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6930261065769212326, guid: 73dd8ee12a9c8a54ebe24d31d8d15474, type: 3}
       propertyPath: rampStart
