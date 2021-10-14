@@ -16,7 +16,7 @@ public class Upgrades : MonoBehaviour
     [Serializable]
     public class Upgrade
     {
-        public float cost = 10f;
+        public float cost = 10;
         public int damage = 0;
         public float attackSpeed = 0f;
         public float shotSpeed = 0f;
@@ -37,8 +37,8 @@ public class Upgrades : MonoBehaviour
         Upgrade upgrade = upgrades[index];
         if (upgrade == null) { return false; }
 
-        int currentCoins = coins.coinAmount;
-        int cost = (int)upgrade.cost;
+        float currentCoins = coins.coinAmount;
+        float cost = upgrade.cost;
 
         if (currentCoins >= cost)
         {
@@ -53,8 +53,8 @@ public class Upgrades : MonoBehaviour
     public bool CanAfford(Upgrade upgrade)
     {
         coins = FindObjectOfType<Coins>();
-        int currentCoins = coins.coinAmount;
-        int cost = (int)upgrade.cost;
+        float currentCoins = coins.coinAmount;
+        float cost = upgrade.cost;
         if (currentCoins >= cost)
         {
             return true;

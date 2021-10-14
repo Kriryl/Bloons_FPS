@@ -43,14 +43,8 @@ public class ShopItem : MonoBehaviour
         upgrade = upgrades.upgrades[shopIndex];
         cost = upgrade.cost;
         startColor = Color.green;
-        costText.text = $"${cost}";
-        if (upgrades.CanAfford(upgrade))
-        {
-            background.color = startColor;
-        }
-        else
-        {
-            background.color = Color.red;
-        }
+        float cleanCost = Mathf.Round(cost * 10) / 10;
+        costText.text = $"${cleanCost}";
+        background.color = upgrades.CanAfford(upgrade) ? startColor : Color.red;
     }
 }

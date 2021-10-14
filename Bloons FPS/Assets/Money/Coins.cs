@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Coins : MonoBehaviour
 {
-    public int coinAmount = 0;
+    public float coinAmount = 0;
 
     public TextMeshProUGUI coinText;
 
@@ -12,13 +12,13 @@ public class Coins : MonoBehaviour
         DisplayCoins();
     }
 
-    public void AddCoins(int amount)
+    public void AddCoins(float amount)
     {
         coinAmount += amount;
         DisplayCoins();
     }
 
-    public void LoseCoins(int cost)
+    public void LoseCoins(float cost)
     {
         coinAmount -= cost;
         DisplayCoins();
@@ -28,7 +28,8 @@ public class Coins : MonoBehaviour
     {
         if (coinText)
         {
-            coinText.text = $"$ {coinAmount}";
+            float cleanCost = Mathf.Round(coinAmount * 10) / 10;
+            coinText.text = $"${cleanCost}";
         }
     }
 }

@@ -72,6 +72,7 @@
     <Compile Include="Assets\Bloons\BloonSpawner.cs" />
     <Compile Include="Assets\General\ShopItem.cs" />
     <Compile Include="Assets\General\Damage.cs" />
+    <Compile Include="Assets\Banana\Banana.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
