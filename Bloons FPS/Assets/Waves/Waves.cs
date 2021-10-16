@@ -22,21 +22,21 @@ public class Waves : MonoBehaviour
 
     private IEnumerator SpawnAllWaves()
     {
+        print(waves.Length);
         for (int i = 0; i < waves.Length; i++)
         {
-            SpawnWave(waves[i]);
+            StartCoroutine(SpawnWave(waves[i]));
             yield return new WaitForSeconds(timeBetweenWaves);
         }
-        print("All waves spawned");
     }
 
     private IEnumerator SpawnWave(Wave wave)
     {
+        print(wave.bloons.Length);
         for (int i = 0; i < wave.bloons.Length; i++)
         {
             spawner.SpawnBloon(wave.bloons[i]);
             yield return new WaitForSeconds(wave.interval);
         }
-        print("Wave spawned");
     }
 }
