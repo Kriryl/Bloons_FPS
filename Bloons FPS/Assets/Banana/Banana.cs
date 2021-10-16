@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.ProBuilder;
 public class Banana : MonoBehaviour
 {
-    public int bananaWorth = 20;
+    public float bananaWorth = 20;
     Coins coins;
     Rigidbody rb;
     Collider myCollider;

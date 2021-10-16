@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Assets\General\BloonHealth.cs" />
     <Compile Include="Assets\Bloons\Bloon.cs" />
+    <Compile Include="Assets\Banana\BananaTree.cs" />
     <Compile Include="Assets\Sound\Sound.cs" />
     <Compile Include="Assets\Starter\Difficulty.cs" />
     <Compile Include="Assets\General\Timer.cs" />
@@ -62,16 +63,16 @@
     <Compile Include="Assets\General\Shop.cs" />
     <Compile Include="Assets\General\Lives.cs" />
     <Compile Include="Assets\Starter\Welcome.cs" />
+    <Compile Include="Assets\Banana\Banana.cs" />
     <Compile Include="Assets\Bloons\BloonType.cs" />
+    <Compile Include="Assets\Banana\Magnet.cs" />
     <Compile Include="Assets\Player\Player.cs" />
     <Compile Include="Assets\General\DeathController.cs" />
     <Compile Include="Assets\Money\Coins.cs" />
     <Compile Include="Assets\Bloons\BloonSpawner.cs" />
     <Compile Include="Assets\General\ShopItem.cs" />
     <Compile Include="Assets\General\Damage.cs" />
-    <Compile Include="Assets\Banana\Banana.cs" />
-    <Compile Include="Assets\Banana\Magnet.cs" />
-    <Compile Include="Assets\Banana\BananaTree.cs" />
+    <Compile Include="Assets\Banana\BananaShop.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

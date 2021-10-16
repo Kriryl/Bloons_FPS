@@ -9,6 +9,7 @@ public class BananaTree : MonoBehaviour
 
     public float spawnInterval = 20f;
     public float start = 20f;
+    public float treeValue = 20f;
 
     private void Start()
     {
@@ -18,5 +19,12 @@ public class BananaTree : MonoBehaviour
     private void SpawnBanana()
     {
         Banana newBanana = Instantiate(banana, spawnLocation.position, Quaternion.identity);
+        newBanana.bananaWorth = treeValue;
+    }
+
+    public void IncreaseStats(float spawnRate, float value)
+    {
+        spawnInterval += spawnRate;
+        treeValue += value;
     }
 }

@@ -10,9 +10,11 @@ public class ShopItem : MonoBehaviour
     public TextMeshProUGUI costText;
     public string upgradeName = "Item";
     public Image background;
+    public bool isBananaRelated = false;
 
     Upgrades upgrades;
     Upgrades.Upgrade upgrade;
+    Upgrades.BananaItem bananaItem;
     float cost;
     Color startColor;
 
@@ -21,15 +23,23 @@ public class ShopItem : MonoBehaviour
         startColor = background.color;
         upgrades = FindObjectOfType<Upgrades>();
         upgradeText.text = upgradeName;
-        upgrade = upgrades.upgrades[shopIndex];
-        cost = upgrade.cost;
+        if (!isBananaRelated)
+        {
+            upgrade = upgrades.upgrades[shopIndex];
+            cost = upgrade.cost;
+        }
+        else
+        {
+            bananaItem = upgrades.bananaItems[shopIndex];
+            cost = bananaItem.cost;
+        }
     }
 
     public void BuyItem()
     {
         if (!isLocked)
         {
-            if (upgrades.CheckCost(shopIndex))
+            if (upgrades.CheckCost(shopIndex, isBananaRelated))
             {
                 print($"Succesfully bought {upgradeName}");
             }
@@ -40,11 +50,23 @@ public class ShopItem : MonoBehaviour
     public void Display()
     {
         upgrades = FindObjectOfType<Upgrades>();
-        upgrade = upgrades.upgrades[shopIndex];
-        cost = upgrade.cost;
-        startColor = Color.green;
-        float cleanCost = Mathf.Round(cost * 10) / 10;
-        costText.text = $"${cleanCost}";
-        background.color = upgrades.CanAfford(upgrade) ? startColor : Color.red;
+        if (!isBananaRelated)
+        {
+            upgrade = upgrades.upgrades[shopIndex];
+            cost = upgrade.cost;
+            startColor = Color.green;
+            float cleanCost = Mathf.Round(cost * 10) / 10;
+            costText.text = $"${cleanCost}";
+            background.color = upgrades.CanAfford(upgrade) ? startColor : Color.red;
+        }
+        else
+        {
+            bananaItem = upgrades.bananaItems[shopIndex];
+            cost = bananaItem.cost;
+            startColor = Color.green;
+            float cleanCost = Mathf.Round(cost * 10) / 10;
+            costText.text = $"${cleanCost}";
+            background.color = upgrades.CanAfford(bananaItem) ? startColor : Color.red;
+        }
     }
 }
