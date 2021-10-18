@@ -17,12 +17,31 @@ public class Player : MonoBehaviour
 
     Damage damageObject;
 
-    public int Damage => damage;
-    public float AttackSpeed => attackSpeed;
-    public float ShotSpeed => shotSpeed;
-    public float Range => range;
-    public float Accuracy => accuracy;
-    public float ProjectileRadius => projectileRadius;
+    public int Damage
+    {
+        get => damage;
+        set => damage = value;
+    }
+    public float AttackSpeed 
+    { 
+        get => attackSpeed; set => attackSpeed = value; 
+    }
+    public float ShotSpeed
+    {
+        get => shotSpeed; set => shotSpeed = value;
+    }
+    public float Range
+    {
+        get => range; set => range = value;
+    }
+    public float Accuracy 
+    {
+        get => accuracy; set => accuracy = value;
+    }
+    public float ProjectileRadius
+    {
+        get => projectileRadius; set => projectileRadius = value;
+    }
 
     private void Start()
     {
