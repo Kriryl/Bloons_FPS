@@ -10,21 +10,30 @@ public class BananaTree : MonoBehaviour
     public float spawnInterval = 20f;
     public float start = 20f;
     public float treeValue = 20f;
+    public float hardCap = 1f;
 
-    private void Start()
+    private IEnumerator Start()
     {
-        InvokeRepeating(nameof(SpawnBanana), start, spawnInterval);
+        yield return new WaitForSeconds(start);
+        _ = StartCoroutine(SpawnBanana());
     }
 
-    private void SpawnBanana()
+    private IEnumerator SpawnBanana()
     {
-        Banana newBanana = Instantiate(banana, spawnLocation.position, Quaternion.identity);
-        newBanana.bananaWorth = treeValue;
+        while (true)
+        {
+            if (hardCap == Mathf.Epsilon) { break; }
+            Banana newBanana = Instantiate(banana, spawnLocation.position, Quaternion.identity);
+            newBanana.bananaWorth = treeValue;
+            if (spawnInterval < hardCap) { spawnInterval = hardCap; }
+            yield return new WaitForSeconds(spawnInterval);
+        }
     }
 
     public void IncreaseStats(float spawnRate, float value)
     {
-        spawnInterval += spawnRate;
+        spawnInterval -= spawnRate;
+        if (spawnInterval < hardCap) { spawnInterval = hardCap; }
         treeValue += value;
     }
 }
