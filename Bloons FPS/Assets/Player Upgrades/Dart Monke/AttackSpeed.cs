@@ -6,6 +6,7 @@ public class AttackSpeed : Base
 
     public override void OnUpgradeBought()
     {
+        player = FindObjectOfType<Player>();
         player.AttackSpeed *= attackSpeedIncrease;
         base.OnUpgradeBought();
     }
