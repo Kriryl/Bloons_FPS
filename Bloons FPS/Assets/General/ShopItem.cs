@@ -26,12 +26,15 @@ public class ShopItem : MonoBehaviour
     public void Display()
     {
         baseUpgrade = FindObjectOfType<BaseUpgrade>();
-        costText.text = baseUpgrade.GetCost(shopIndex).ToString();
+        upgradeText.text = upgradeName;
+        float smoothCost = Mathf.Round(baseUpgrade.GetCost(shopIndex) / 10) * 10;
+        costText.text = smoothCost.ToString();
+        background.color = baseUpgrade.CanAfford(shopIndex) ? Color.green : Color.red;
     }
 
     public void ButItem()
     {
-        if (!isLocked)
+        if (!isLocked && baseUpgrade.CanAfford(shopIndex))
         {
             isLocked = true;
             Display();

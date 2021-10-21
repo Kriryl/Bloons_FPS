@@ -5,6 +5,7 @@ public class BaseUpgrade : MonoBehaviour
 {
     public UpgradePath[] upgrades;
     private int pathLenght = 0;
+    private Coins coins;
 
     private void Start()
     {
@@ -13,6 +14,7 @@ public class BaseUpgrade : MonoBehaviour
         {
             behaviour.upgradeBehaviour.enabled = false;
         }
+        coins = FindObjectOfType<Coins>();
     }
 
     public float GetCost(int index)
@@ -20,11 +22,18 @@ public class BaseUpgrade : MonoBehaviour
         return upgrades[index].cost;
     }
 
+    public bool CanAfford(int index)
+    {
+        coins = FindObjectOfType<Coins>();
+        float currentCoins = coins.coinAmount;
+        return currentCoins >= upgrades[index].cost;
+    }
+
     [Serializable]
     public class UpgradePath
     {
         public Base upgradeBehaviour;
-        public float cost = 10f;
+        public float cost = 10;
     }
 
     public void OnUpgrade(int index)

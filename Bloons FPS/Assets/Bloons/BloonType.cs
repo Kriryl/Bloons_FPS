@@ -82,7 +82,10 @@ public class BloonType : Bloon
                 }
                 else
                 {
-                    Destroy(children[i].gameObject);
+                    if (children[i] != null)
+                    {
+                        Destroy(children[i].gameObject);
+                    }
                     Destroy(gameObject);
                 }
             }
@@ -93,8 +96,11 @@ public class BloonType : Bloon
     {
         foreach (BloonType bloonType in children)
         {
-            bloonType.transform.parent = null;
-            bloonType.gameObject.SetActive(true);
+            if (bloonType != null)
+            {
+                bloonType.transform.parent = null;
+                bloonType.gameObject.SetActive(true);
+            }
         }
         Destroy(gameObject);
     }
