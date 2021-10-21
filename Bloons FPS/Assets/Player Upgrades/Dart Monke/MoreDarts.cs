@@ -1,17 +1,16 @@
 using UnityEngine;
 
-public class AttackSpeed : Base
+public class MoreDarts : Base
 {
-    public float attackSpeedIncrease = 1.5f;
-
+    public ParticleSystem extraDart;
+    public Vector3 pos;
     public override void OnUpgradeBought()
     {
         if (!IsActive())
         {
             return;
         }
-        player = FindObjectOfType<Player>();
-        player.AttackSpeed *= attackSpeedIncrease;
         base.OnUpgradeBought();
+        player.AddBullet(Instantiate(extraDart), pos);
     }
 }

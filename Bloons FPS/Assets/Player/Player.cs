@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [Header("General")]
-    [SerializeField] private ParticleSystem projectile = null;
+    [SerializeField] private List<ParticleSystem> projectiles = null;
 
     [Header("Projectile Properties")]
     [Tooltip("Damage of each projectile")] [SerializeField] private int damage = 1;
@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float projectileRadius = 0.1f;
 
     Damage damageObject;
+    ParticleSystem mainProjectile;
 
     public int Damage
     {
@@ -46,6 +47,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         damageObject = GetComponent<Damage>();
+        mainProjectile = projectiles[0];
     }
 
     private void Update()
@@ -55,29 +57,46 @@ public class Player : MonoBehaviour
 
     private void CalculateStats()
     {
-        damageObject.damage = damage;
-        ShotSpeedAndRange();
-        AttackSpeed();
-        Accuracy();
-
-        void ShotSpeedAndRange()
+        foreach (ParticleSystem projectile in projectiles)
         {
-            ParticleSystem.MainModule main = projectile.main;
-            main.startSpeed = shotSpeed;
-            main.startLifetime = range;
+            damageObject.damage = damage;
+            ShotSpeedAndRange();
+            AttackSpeed();
+            Accuracy();
+
+            void ShotSpeedAndRange()
+            {
+                ParticleSystem.MainModule main = projectile.main;
+                main.startSpeed = shotSpeed;
+                main.startLifetime = range;
+            }
+
+            void AttackSpeed()
+            {
+                ParticleSystem.EmissionModule emission = projectile.emission;
+                emission.rateOverTime = new ParticleSystem.MinMaxCurve(attackSpeed);
+            }
+
+            void Accuracy()
+            {
+                ParticleSystem.ShapeModule shapeModule = projectile.shape;
+                shapeModule.radius = projectileRadius;
+                shapeModule.angle = accuracy;
+            }
         }
+    }
 
-        void AttackSpeed()
+    public void AddBullet(ParticleSystem projectile, Vector3 pos)
+    {
+        projectile.transform.parent = Camera.main.transform;
+        projectile.transform.position = Vector3.zero;
+        projectile.transform.rotation = new Quaternion(0, 0, 0, 0);
+        projectile.transform.localPosition = mainProjectile.transform.localPosition + pos;
+        projectiles.Add(projectile);
+        foreach(ParticleSystem particleSystem in projectiles)
         {
-            ParticleSystem.EmissionModule emission = projectile.emission;
-            emission.rateOverTime = new ParticleSystem.MinMaxCurve(attackSpeed);
-        }
-
-        void Accuracy()
-        {
-            ParticleSystem.ShapeModule shapeModule = projectile.shape;
-            shapeModule.radius = projectileRadius;
-            shapeModule.angle = accuracy;
+            particleSystem.Stop();
+            particleSystem.Play();
         }
     }
 

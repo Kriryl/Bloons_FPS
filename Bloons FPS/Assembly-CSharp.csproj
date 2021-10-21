@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Player Upgrades\Dart Monke\MoreDarts.cs" />
     <Compile Include="Assets\General\BloonHealth.cs" />
     <Compile Include="Assets\Player Upgrades\Base.cs" />
     <Compile Include="Assets\Bloons\Bloon.cs" />

@@ -18,10 +18,15 @@ public class ShopItem : MonoBehaviour
         baseUpgrade = FindObjectOfType<BaseUpgrade>();
     }
 
+    private void OnEnable()
+    {
+        Display();
+    }
+
     public void Display()
     {
         baseUpgrade = FindObjectOfType<BaseUpgrade>();
-        costText.text = baseUpgrade.GetCost().ToString();
+        costText.text = baseUpgrade.GetCost(shopIndex).ToString();
     }
 
     public void ButItem()
@@ -30,7 +35,7 @@ public class ShopItem : MonoBehaviour
         {
             isLocked = true;
             Display();
-            baseUpgrade.OnUpgrade();
+            baseUpgrade.OnUpgrade(shopIndex);
         }
     }
 }

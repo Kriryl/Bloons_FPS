@@ -1,14 +1,16 @@
 using System.Collections;
 using System;
 using UnityEngine;
+using TMPro;
 
 public class Waves : MonoBehaviour
 {
     public BloonSpawner spawner;
+    public TextMeshProUGUI waveDisplay;
     public Wave[] waves;
-    public float timeBetweenWaves = 5f;
     private int numOfBloons = int.MaxValue;
     private bool spawnWave = false;
+    private int maxWave;
 
     [Serializable]
     public class Wave
@@ -24,6 +26,7 @@ public class Waves : MonoBehaviour
 
     private void Start()
     {
+        maxWave = waves.Length;
         _ = StartCoroutine(SpawnAllWaves());
     }
 
@@ -32,6 +35,7 @@ public class Waves : MonoBehaviour
         for (int i = 0; i < waves.Length; i++)
         {
             spawnWave = false;
+            DisplayWave(i);
             StartCoroutine(SpawnWave(waves[i]));
             yield return new WaitUntil(() => numOfBloons <= 0 && spawnWave);
         }
@@ -45,5 +49,10 @@ public class Waves : MonoBehaviour
             yield return new WaitForSeconds(wave.interval);
         }
         spawnWave = true;
+    }
+
+    private void DisplayWave(int index)
+    {
+        waveDisplay.text = $"Wave {index + 1}/{maxWave}";
     }
 }

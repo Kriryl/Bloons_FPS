@@ -4,7 +4,6 @@ using System;
 public class BaseUpgrade : MonoBehaviour
 {
     public UpgradePath[] upgrades;
-    public int index = 0;
     private int pathLenght = 0;
 
     private void Start()
@@ -16,7 +15,7 @@ public class BaseUpgrade : MonoBehaviour
         }
     }
 
-    public float GetCost()
+    public float GetCost(int index)
     {
         return upgrades[index].cost;
     }
@@ -28,12 +27,11 @@ public class BaseUpgrade : MonoBehaviour
         public float cost = 10f;
     }
 
-    public void OnUpgrade()
+    public void OnUpgrade(int index)
     {
         if (index + 1 <= pathLenght)
         {
             upgrades[index].upgradeBehaviour.enabled = true;
-            index++;
             BroadcastMessage("OnUpgradeBought");
         }
     }
