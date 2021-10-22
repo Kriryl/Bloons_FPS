@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
     Damage damageObject;
     ParticleSystem mainProjectile;
 
+    public ParticleSystem[] Projectiles => projectiles.ToArray();
+
     public int Damage
     {
         get => damage;
@@ -35,7 +37,7 @@ public class Player : MonoBehaviour
     {
         get => range; set => range = value;
     }
-    public float Accuracy 
+    public float Accuracy
     {
         get => accuracy; set => accuracy = value;
     }
@@ -122,3 +124,5 @@ public class Player : MonoBehaviour
         this.accuracy += accuracy;
     }
 }
+
+// 91538206
