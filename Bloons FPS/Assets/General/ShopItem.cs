@@ -27,8 +27,7 @@ public class ShopItem : MonoBehaviour
     {
         baseUpgrade = FindObjectOfType<BaseUpgrade>();
         upgradeText.text = upgradeName;
-        float smoothCost = Mathf.Round(baseUpgrade.GetCost(shopIndex) / 10) * 10;
-        costText.text = smoothCost.ToString();
+        costText.text = baseUpgrade.GetCost(shopIndex).ToString();
         background.color = baseUpgrade.CanAfford(shopIndex) ? Color.green : Color.red;
     }
 

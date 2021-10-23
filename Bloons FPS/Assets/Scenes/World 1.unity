@@ -47426,12 +47426,16 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 248036195, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
+      propertyPath: upgrades.Array.data[0].cost
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 248036195, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
       propertyPath: upgrades.Array.data[1].cost
-      value: 2
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 248036195, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
       propertyPath: upgrades.Array.data[2].cost
-      value: 5
+      value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 248036195, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
       propertyPath: upgrades.Array.data[2].upgradeBehaviour

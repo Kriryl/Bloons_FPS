@@ -40,6 +40,8 @@ public class BaseUpgrade : MonoBehaviour
     {
         if (index + 1 <= pathLenght)
         {
+            float cost = upgrades[index].cost;
+            coins.LoseCoins(cost);
             upgrades[index].upgradeBehaviour.enabled = true;
             BroadcastMessage("OnUpgradeBought");
         }

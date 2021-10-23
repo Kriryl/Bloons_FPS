@@ -11,12 +11,15 @@ public class Waves : MonoBehaviour
     private int numOfBloons = int.MaxValue;
     private bool spawnWave = false;
     private int maxWave;
+    private Coins coins;
+    private float rewardMoney;
 
     [Serializable]
     public class Wave
     {
         public float interval = 1f;
         public BloonType[] bloons;
+        public float rewardMoney = 10f;
     }
 
     private void Update()
@@ -27,6 +30,7 @@ public class Waves : MonoBehaviour
     private void Start()
     {
         maxWave = waves.Length;
+        coins = FindObjectOfType<Coins>();
         _ = StartCoroutine(SpawnAllWaves());
     }
 
@@ -34,10 +38,12 @@ public class Waves : MonoBehaviour
     {
         for (int i = 0; i < waves.Length; i++)
         {
+            rewardMoney = waves[i].rewardMoney;
             spawnWave = false;
             DisplayWave(i);
             StartCoroutine(SpawnWave(waves[i]));
             yield return new WaitUntil(() => numOfBloons <= 0 && spawnWave);
+            RewardPlayer();
         }
     }
 
@@ -54,5 +60,14 @@ public class Waves : MonoBehaviour
     private void DisplayWave(int index)
     {
         waveDisplay.text = $"Wave {index + 1}/{maxWave}";
+    }
+
+    private void RewardPlayer()
+    {
+        if (coins)
+        {
+            print($"Round complete. Player rewarded ${rewardMoney} coins");
+            coins.AddCoins(rewardMoney);
+        }
     }
 }
