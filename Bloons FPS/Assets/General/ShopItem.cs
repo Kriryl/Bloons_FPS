@@ -1,20 +1,24 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class ShopItem : MonoBehaviour
+public class ShopItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public bool isLocked = false;
     public int shopIndex = 0;
     public TextMeshProUGUI upgradeText;
     public TextMeshProUGUI costText;
     public string upgradeName = "Item";
+    public string description = "Item description";
     public Image background;
 
+    TooltipShow tooltipShow;
     BaseUpgrade baseUpgrade;
 
     private void Start()
     {
+        tooltipShow = FindObjectOfType<TooltipShow>();
         baseUpgrade = FindObjectOfType<BaseUpgrade>();
     }
 
@@ -39,5 +43,17 @@ public class ShopItem : MonoBehaviour
             Display();
             baseUpgrade.OnUpgrade(shopIndex);
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        tooltipShow.tooltip = description;
+        tooltipShow.Show();
+        tooltipShow.canvas.transform.position = tooltipShow.GetMousePos();
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        tooltipShow.Hide();
     }
 }

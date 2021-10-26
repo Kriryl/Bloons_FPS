@@ -11,6 +11,7 @@ public class MoreDarts : Base
             return;
         }
         base.OnUpgradeBought();
-        player.AddBullet(Instantiate(extraDart), pos);
+        ParticleSystem extraBullet = Instantiate(extraDart);
+        player.AddBullet(extraBullet, pos);
     }
 }

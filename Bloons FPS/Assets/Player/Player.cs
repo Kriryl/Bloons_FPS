@@ -91,11 +91,10 @@ public class Player : MonoBehaviour
     public void AddBullet(ParticleSystem projectile, Vector3 pos)
     {
         projectile.transform.parent = Camera.main.transform;
-        projectile.transform.position = Vector3.zero;
-        projectile.transform.rotation = new Quaternion(0, 0, 0, 0);
+        projectile.transform.SetPositionAndRotation(Vector3.zero, new Quaternion(0, 0, 0, 0));
         projectile.transform.localPosition = mainProjectile.transform.localPosition + pos;
         projectiles.Add(projectile);
-        foreach(ParticleSystem particleSystem in projectiles)
+        foreach (ParticleSystem particleSystem in projectiles)
         {
             particleSystem.Stop();
             particleSystem.Play();
