@@ -14,6 +14,7 @@ public class Base : MonoBehaviour
     public virtual void OnUpgradeBought()
     {
         isActive = true;
+        player = FindObjectOfType<Player>();
     }
 
     public bool IsActive()

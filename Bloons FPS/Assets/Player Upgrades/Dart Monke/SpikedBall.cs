@@ -8,9 +8,9 @@ public class SpikedBall : Base
     {
         if (!IsActive()) { return; }
 
-        player = FindObjectOfType<Player>();
+        base.OnUpgradeBought();
+
         player.Damage *= 2;
-        player.ShotSpeed *= 1.5f;
         player.Range *= 2f;
         player.AttackSpeed *= 0.8f;
 
@@ -19,7 +19,5 @@ public class SpikedBall : Base
             ParticleSystemRenderer particleSystemRenderer = projectile.GetComponent<ParticleSystemRenderer>();
             particleSystemRenderer.mesh = ballProjectile;
         }
-
-        base.OnUpgradeBought();
     }
 }

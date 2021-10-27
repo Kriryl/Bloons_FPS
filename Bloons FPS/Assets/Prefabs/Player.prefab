@@ -363,6 +363,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1184263105132970039}
     m_Modifications:
     - target: {fileID: 7564693766386956432, guid: cfc669638d71b4e4face71184ba4a471, type: 3}
+      propertyPath: InitialModule.size3D
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564693766386956432, guid: cfc669638d71b4e4face71184ba4a471, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 1
       objectReference: {fileID: 0}
@@ -425,7 +429,7 @@ PrefabInstance:
     - target: {fileID: 7564693766386956447, guid: cfc669638d71b4e4face71184ba4a471, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 6528356924907794671, guid: 34e910e3fb34dc048b3c598f9369f8e6, type: 3}
+      objectReference: {fileID: -6305002647700223543, guid: 3e2cebe48e2ee674e8d8b946b4bf872b, type: 3}
     - target: {fileID: 7564693766386956447, guid: cfc669638d71b4e4face71184ba4a471, type: 3}
       propertyPath: m_RenderAlignment
       value: 4
