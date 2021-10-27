@@ -16,6 +16,14 @@ public class TooltipShow : MonoBehaviour
         Hide();
     }
 
+    private void Update()
+    {
+        if (Time.timeScale > 0)
+        {
+            Hide();
+        }
+    }
+
     public Vector3 GetMousePos()
     {
         return Input.mousePosition + addedPos;

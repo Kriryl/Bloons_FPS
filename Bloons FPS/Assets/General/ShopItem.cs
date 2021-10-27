@@ -32,7 +32,14 @@ public class ShopItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         baseUpgrade = FindObjectOfType<BaseUpgrade>();
         upgradeText.text = upgradeName;
         costText.text = baseUpgrade.GetCost(shopIndex).ToString();
-        background.color = baseUpgrade.CanAfford(shopIndex) ? Color.green : Color.red;
+        if (isLocked)
+        {
+            background.color = Color.gray;
+        }
+        else
+        {
+            background.color = baseUpgrade.CanAfford(shopIndex) ? Color.green : Color.red;
+        }
     }
 
     public void ButItem()
@@ -47,6 +54,10 @@ public class ShopItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if (isLocked)
+        {
+            description = "Already bought";
+        }
         tooltipShow.tooltip = description;
         tooltipShow.Show();
         tooltipShow.canvas.transform.position = tooltipShow.GetMousePos();
