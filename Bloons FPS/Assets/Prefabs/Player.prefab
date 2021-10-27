@@ -324,7 +324,6 @@ MonoBehaviour:
     cost: 10
   - upgradeBehaviour: {fileID: 248036197}
     cost: 1
-  index: 0
 --- !u!114 &248036196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,6 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  isActive: 0
   attackSpeedIncrease: 1.5
 --- !u!114 &248036197
 MonoBehaviour:
@@ -352,6 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  isActive: 0
   extraDart: {fileID: 7564693766386956432, guid: cfc669638d71b4e4face71184ba4a471, type: 3}
   pos: {x: 0, y: 0, z: 0}
 --- !u!1001 &8688686007252380411
@@ -421,6 +422,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7564693766386956447, guid: cfc669638d71b4e4face71184ba4a471, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 6528356924907794671, guid: 34e910e3fb34dc048b3c598f9369f8e6, type: 3}
     - target: {fileID: 7564693766386956447, guid: cfc669638d71b4e4face71184ba4a471, type: 3}
       propertyPath: m_RenderAlignment
       value: 4
