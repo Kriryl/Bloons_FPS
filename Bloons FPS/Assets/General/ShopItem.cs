@@ -47,7 +47,11 @@ public class ShopItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         if (!isLocked && baseUpgrade.CanAfford(shopIndex))
         {
             isLocked = true;
-            Display();
+            ShopItem[] shopItems = FindObjectsOfType<ShopItem>(true);
+            foreach (ShopItem shopItem in shopItems)
+            {
+                shopItem.Display();
+            }
             baseUpgrade.OnUpgrade(shopIndex);
         }
     }

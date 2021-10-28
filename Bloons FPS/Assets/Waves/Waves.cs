@@ -8,18 +8,19 @@ public class Waves : MonoBehaviour
     public BloonSpawner spawner;
     public TextMeshProUGUI waveDisplay;
     public Wave[] waves;
+    public float rewardMoney = 10f;
+    public float rewardIncrease = 1f;
+
     private int numOfBloons = int.MaxValue;
     private bool spawnWave = false;
     private int maxWave;
     private Coins coins;
-    private float rewardMoney;
 
     [Serializable]
     public class Wave
     {
         public float interval = 1f;
         public BloonType[] bloons;
-        public float rewardMoney = 10f;
     }
 
     private void Update()
@@ -38,7 +39,6 @@ public class Waves : MonoBehaviour
     {
         for (int i = 0; i < waves.Length; i++)
         {
-            rewardMoney = waves[i].rewardMoney;
             spawnWave = false;
             DisplayWave(i);
             StartCoroutine(SpawnWave(waves[i]));
@@ -68,6 +68,7 @@ public class Waves : MonoBehaviour
         {
             print($"Round complete. Player rewarded ${rewardMoney} coins");
             coins.AddCoins(rewardMoney);
+            rewardMoney += rewardIncrease;
         }
     }
 }
