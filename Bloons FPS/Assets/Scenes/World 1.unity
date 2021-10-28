@@ -48052,12 +48052,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 248036195, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
+      propertyPath: upgrades.Array.data[1].cost
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 248036195, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
+      propertyPath: upgrades.Array.data[2].cost
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 248036195, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
       propertyPath: upgrades.Array.data[3].cost
-      value: 200
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 248036195, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
       propertyPath: upgrades.Array.data[4].cost
-      value: 400
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1184263106952911170, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
       propertyPath: m_Name
@@ -48107,6 +48115,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1184263106952911178, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
+      propertyPath: mesh
+      value: 
+      objectReference: {fileID: 6528356924907794671, guid: cdb177e1e40416f4097ca2c552e8879b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 721e9a7ad713fc940aa3495f8cec9bec, type: 3}
 --- !u!1001 &1190693241996454074

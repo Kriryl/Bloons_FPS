@@ -10,8 +10,7 @@ public class AttackSpeed : Base
         {
             return;
         }
-        player = FindObjectOfType<Player>();
-        player.AttackSpeed *= attackSpeedIncrease;
         base.OnUpgradeBought();
+        player.AttackSpeed *= attackSpeedIncrease;
     }
 }

@@ -1,5 +1,3 @@
-using UnityEngine;
-
 public class Jaggernaut : Base
 {
     public float ballSizeMultiplier = 2f;
@@ -11,13 +9,8 @@ public class Jaggernaut : Base
 
         player.AttackSpeed *= 2f;
         player.Damage *= 2;
-        player.ShotSpeed *= 1.5f;
-        player.Range *= 10f;
-
-        foreach (ParticleSystem projectile in player.Projectiles)
-        {
-            var statSize = projectile.main;
-            statSize.startSize = new ParticleSystem.MinMaxCurve(statSize.startSize.constant * ballSizeMultiplier);
-        }
+        player.ShotSpeed *= 2f;
+        player.Range *= 2f;
+        player.ProjectileSize *= ballSizeMultiplier;
     }
 }

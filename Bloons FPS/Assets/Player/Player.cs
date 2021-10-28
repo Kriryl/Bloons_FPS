@@ -14,6 +14,11 @@ public class Player : MonoBehaviour
     [Tooltip("Projectile Lifetime")] [SerializeField] private float range = 10f;
     [SerializeField] private float accuracy = 2f;
     [SerializeField] private float projectileRadius = 0.1f;
+    [SerializeField] private float projectileSize = 0.2f;
+    [SerializeField] private Mesh mesh;
+    [SerializeField] private float bounce = 1f;
+    [SerializeField] private float damp = 1f;
+    [SerializeField] private float loss = 1f;
 
     Damage damageObject;
     ParticleSystem mainProjectile;
@@ -45,6 +50,30 @@ public class Player : MonoBehaviour
     {
         get => projectileRadius; set => projectileRadius = value;
     }
+    public float ProjectileSize
+    {
+        get => projectileSize; set => projectileSize = value;
+    }
+
+    public Mesh Mesh
+    {
+        get => mesh; set => mesh = value;
+    }
+
+    public float Bounce
+    {
+        get => bounce; set => bounce = value;
+    }
+
+    public float Dampen
+    {
+        get => damp; set => damp = value;
+    }
+
+    public float Loss
+    {
+        get => loss; set => loss = value;
+    }
 
     private void Start()
     {
@@ -65,12 +94,15 @@ public class Player : MonoBehaviour
             ShotSpeedAndRange();
             AttackSpeed();
             Accuracy();
+            SetMesh();
+            CollisionStuff();
 
             void ShotSpeedAndRange()
             {
                 ParticleSystem.MainModule main = projectile.main;
                 main.startSpeed = shotSpeed;
                 main.startLifetime = range;
+                main.startSize = projectileSize;
             }
 
             void AttackSpeed()
@@ -84,6 +116,20 @@ public class Player : MonoBehaviour
                 ParticleSystem.ShapeModule shapeModule = projectile.shape;
                 shapeModule.radius = projectileRadius;
                 shapeModule.angle = accuracy;
+            }
+
+            void SetMesh()
+            {
+                ParticleSystemRenderer particleSystemRenderer = projectile.GetComponent<ParticleSystemRenderer>();
+                particleSystemRenderer.mesh = mesh;
+            }
+
+            void CollisionStuff()
+            {
+                var module = projectile.collision;
+                module.bounce = bounce;
+                module.dampen = damp;
+                module.lifetimeLoss = loss;
             }
         }
     }
