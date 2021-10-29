@@ -9,6 +9,7 @@ public class BouncingDarts : Base
             return;
         }
         base.OnUpgradeBought();
+        player.Range += 0.2f;
         player.Bounce = 1f;
         player.Dampen = 0.5f;
         player.Loss = 0f;

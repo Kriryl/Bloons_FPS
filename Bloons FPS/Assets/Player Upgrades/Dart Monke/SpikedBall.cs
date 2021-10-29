@@ -11,7 +11,8 @@ public class SpikedBall : Base
         base.OnUpgradeBought();
 
         player.Damage *= 2;
-        player.Range *= 2f;
+        player.Range *= 1.5f;
+        player.ShotSpeed += 5f;
         player.Mesh = ballProjectile;
     }
 }
