@@ -32,7 +32,7 @@ public class Bloon : MonoBehaviour
         coin = FindObjectOfType<Coins>();
         lives = FindObjectOfType<Lives>();
         agent = GetComponent<NavMeshAgent>();
-        player = GameObject.Find("Player");
+        player = FindObjectOfType<Player>().gameObject;
         BloonHealth = GetComponent<BloonHealth>();
     }
 
