@@ -40,7 +40,8 @@ public class BloonSpawner : MonoBehaviour
 
     public void SpawnBloon(BloonType bloon)
     {
-        _ = Instantiate(bloon, transform.position, transform.rotation);
+        BloonType bloonType = Instantiate(bloon, transform.position, transform.rotation);
+        bloonType.gameObject.layer = LayerMask.NameToLayer("Bloon");
     }
 
     private IEnumerator Ramp()

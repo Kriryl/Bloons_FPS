@@ -42940,6 +42940,7 @@ MonoBehaviour:
   livesTakenOnHit: 2
   popvfx: {fileID: 2891127767421277930, guid: 6cc278c638d244c4aa33f163bb6f6ac2, type: 3}
   damageLeft: 0
+  affectsChildren: 1
 --- !u!114 &977332599902067856
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ public class Base : MonoBehaviour
 {
     [HideInInspector]
     public Player player;
+    [HideInInspector]
     public bool isActive = false;
 
     private void Start()

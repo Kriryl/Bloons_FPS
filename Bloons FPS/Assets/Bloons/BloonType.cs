@@ -99,6 +99,7 @@ public class BloonType : Bloon
             if (bloonType != null)
             {
                 bloonType.transform.parent = null;
+                bloonType.gameObject.layer = LayerMask.NameToLayer("Bloon");
                 bloonType.gameObject.SetActive(true);
             }
         }

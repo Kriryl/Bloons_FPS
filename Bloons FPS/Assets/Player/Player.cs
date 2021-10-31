@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float bounce = 1f;
     [SerializeField] private float damp = 1f;
     [SerializeField] private float loss = 1f;
+    [SerializeField] private LayerMask layerMask;
 
     Damage damageObject;
     ParticleSystem mainProjectile;
@@ -73,6 +74,11 @@ public class Player : MonoBehaviour
     public float Loss
     {
         get => loss; set => loss = value;
+    }
+
+    public LayerMask LayerMask
+    {
+        get => layerMask; set => layerMask = value;
     }
 
     private void Start()
@@ -130,6 +136,7 @@ public class Player : MonoBehaviour
                 module.bounce = bounce;
                 module.dampen = damp;
                 module.lifetimeLoss = loss;
+                module.collidesWith = layerMask;
             }
         }
     }
