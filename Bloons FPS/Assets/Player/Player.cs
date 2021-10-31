@@ -150,7 +150,32 @@ public class Player : MonoBehaviour
         foreach (ParticleSystem particleSystem in projectiles)
         {
             particleSystem.Stop();
-            particleSystem.Play();
+        }
+        Invoke(nameof(StartParticles), 1f);
+    }
+
+    public void AddBullet(int num, Vector3 pos)
+    {
+        for (int i = 0; i < num; i++)
+        {
+            ParticleSystem projectile = Instantiate(projectiles[0]);
+            projectile.transform.parent = Camera.main.transform;
+            projectile.transform.SetPositionAndRotation(Vector3.zero, new Quaternion(0, 0, 0, 0));
+            projectile.transform.localPosition = mainProjectile.transform.localPosition + pos;
+            projectiles.Add(projectile);
+            foreach (ParticleSystem particleSystem in projectiles)
+            {
+                particleSystem.Stop();
+            }
+        }
+        Invoke(nameof(StartParticles), 1f);
+    }
+
+    private void StartParticles()
+    {
+        foreach (ParticleSystem projectile in projectiles)
+        {
+            projectile.Play();
         }
     }
 

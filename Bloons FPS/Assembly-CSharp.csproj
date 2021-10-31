@@ -87,6 +87,7 @@
     <Compile Include="Assets\Player Upgrades\Seeker.cs" />
     <Compile Include="Assets\Player Upgrades\Ninja Monke\SeekingShurikens.cs" />
     <Compile Include="Assets\Player Upgrades\Ninja Monke\ImprovedSeeking.cs" />
+    <Compile Include="Assets\Player Upgrades\Ninja Monke\GrandMaster.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
