@@ -6,7 +6,6 @@ public class BloonType : Bloon
     public BloonType[] children;
     public float speed = 5f;
     public bool On = true;
-    public string bloonName = "Test Bloon";
     public int coinsOnDamage = 1;
     public int livesTakenOnHit = 1;
     public ParticleSystem popvfx;
@@ -14,10 +13,22 @@ public class BloonType : Bloon
     public int damageLeft = 0;
     public bool affectsChildren = true;
 
+    private Sound sound;
+    private BloonInfo bloonInfo;
+
     private void Update()
     {
         IsOn = On;
         SeekPlayer(speed);
+    }
+
+    private void OnEnable()
+    {
+        sound = FindObjectOfType<Sound>();
+        sound.OnBloonSpawn();
+
+        bloonInfo = FindObjectOfType<BloonInfo>();
+        bloonInfo.OnBloonSpawn(bloonName, this);
     }
 
     private void OnParticleCollision(GameObject other)

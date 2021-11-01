@@ -42931,11 +42931,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a8df20ac42fa84408a32a1c3fdddecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloonName: Blue Bloon
   children:
   - {fileID: 5779070750816647303}
   speed: 3
   On: 1
-  bloonName: Test Bloon
   coinsOnDamage: 1
   livesTakenOnHit: 2
   popvfx: {fileID: 2891127767421277930, guid: 6cc278c638d244c4aa33f163bb6f6ac2, type: 3}

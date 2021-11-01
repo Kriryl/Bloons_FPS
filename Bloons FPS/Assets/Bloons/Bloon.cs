@@ -7,8 +7,9 @@ public class Bloon : MonoBehaviour
     private Lives lives;
     private NavMeshAgent agent;
     private GameObject player;
-    private Sound sound;
     private bool isOn = true;
+
+    public string bloonName = "";
 
     public int Health => BloonHealth.health;
 
@@ -20,15 +21,8 @@ public class Bloon : MonoBehaviour
         set => isOn = value;
     }
 
-    private void OnEnable()
-    {
-        sound = FindObjectOfType<Sound>();
-        sound.OnBloonSpawn();
-    }
-
     private void Start()
     {
-        sound = FindObjectOfType<Sound>();
         coin = FindObjectOfType<Coins>();
         lives = FindObjectOfType<Lives>();
         agent = GetComponent<NavMeshAgent>();
