@@ -1,20 +1,25 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Characters : MonoBehaviour
 {
-    public Character[] characters;
-    private Character selectedCharacter;
+    public const string SELECTED_CHARACTER = "Selected character";
+    public const string SELECTED_CHARACTER_STORE = "Store";
 
-    public BaseUpgrade BaseUpgrade => selectedCharacter.character;
+    public Character[] characters;
+
+    public BaseUpgrade BaseUpgrade => SelectedCharacter.character;
+
+    public Character SelectedCharacter { get; private set; }
 
     public string CharacterName
     {
         get
         {
-            if (selectedCharacter != null)
+            if (SelectedCharacter != null)
             {
-                return selectedCharacter.name;
+                return SelectedCharacter.name;
             }
             else
             {
@@ -27,21 +32,29 @@ public class Characters : MonoBehaviour
     public class Character
     {
         public BaseUpgrade character;
+        public GameObject store;
+        public string storeToken = "";
         public string name = string.Empty;
-
-        public static void Equals()
-        { }
     }
 
     public void SelectCharacter(string refrenceName)
     {
+        string token = "";
+
         foreach (Character character in characters)
         {
             if (refrenceName.ToLower() == character.name.ToLower())
             {
-                selectedCharacter = character;
+                SelectedCharacter = character;
+                token = character.storeToken;
                 break;
             }
+        }
+        if (SelectedCharacter != null)
+        {
+            PlayerPrefs.SetString(SELECTED_CHARACTER, refrenceName);
+            PlayerPrefs.SetString(SELECTED_CHARACTER_STORE, token);
+            AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
