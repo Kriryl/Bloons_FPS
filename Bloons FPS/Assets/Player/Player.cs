@@ -171,6 +171,14 @@ public class Player : MonoBehaviour
         Invoke(nameof(StartParticles), 1f);
     }
 
+    public void AddIndepententBullet(ParticleSystem projectiles, Vector3 pos)
+    {
+        ParticleSystem projectile = Instantiate(projectiles);
+        projectile.transform.parent = Camera.main.transform;
+        projectile.transform.SetPositionAndRotation(Vector3.zero, new Quaternion(0, 0, 0, 0));
+        projectile.transform.localPosition = mainProjectile.transform.localPosition + pos;
+    }
+
     private void StartParticles()
     {
         foreach (ParticleSystem projectile in projectiles)

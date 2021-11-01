@@ -27,6 +27,14 @@ public class BloonType : Bloon
         {
             OnDamageTaken(damage.damage, coinsOnDamage);
         }
+        else
+        {
+            damage = other.GetComponent<Damage>();
+            if (damage)
+            {
+                OnDamageTaken(damage.damage, coinsOnDamage);
+            }
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

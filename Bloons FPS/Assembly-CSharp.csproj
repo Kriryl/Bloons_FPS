@@ -63,8 +63,11 @@
     <Compile Include="Assets\Sound\Sound.cs" />
     <Compile Include="Assets\Starter\Difficulty.cs" />
     <Compile Include="Assets\Player Upgrades\Dart Monke\AttackSpeed.cs" />
+    <Compile Include="Assets\Player Upgrades\Seeker.cs" />
     <Compile Include="Assets\Player Upgrades\TooltipShow.cs" />
     <Compile Include="Assets\General\Timer.cs" />
+    <Compile Include="Assets\Player Upgrades\Ninja Monke\GrandMaster.cs" />
+    <Compile Include="Assets\Player Upgrades\Ninja Monke\NinjaDicipline.cs" />
     <Compile Include="Assets\General\Upgrades.cs" />
     <Compile Include="Assets\General\Shop.cs" />
     <Compile Include="Assets\General\Lives.cs" />
@@ -77,17 +80,15 @@
     <Compile Include="Assets\Player\Player.cs" />
     <Compile Include="Assets\Player Upgrades\BaseUpgrade.cs" />
     <Compile Include="Assets\General\DeathController.cs" />
+    <Compile Include="Assets\Player Upgrades\Ninja Monke\ImprovedSeeking.cs" />
+    <Compile Include="Assets\Player Upgrades\Ninja Monke\SeekingShurikens.cs" />
     <Compile Include="Assets\Money\Coins.cs" />
     <Compile Include="Assets\Waves\Waves.cs" />
     <Compile Include="Assets\Bloons\BloonSpawner.cs" />
     <Compile Include="Assets\Player\Characters.cs" />
     <Compile Include="Assets\General\ShopItem.cs" />
     <Compile Include="Assets\General\Damage.cs" />
-    <Compile Include="Assets\Player Upgrades\Ninja Monke\NinjaDicipline.cs" />
-    <Compile Include="Assets\Player Upgrades\Seeker.cs" />
-    <Compile Include="Assets\Player Upgrades\Ninja Monke\SeekingShurikens.cs" />
-    <Compile Include="Assets\Player Upgrades\Ninja Monke\ImprovedSeeking.cs" />
-    <Compile Include="Assets\Player Upgrades\Ninja Monke\GrandMaster.cs" />
+    <Compile Include="Assets\Player Upgrades\Ninja Monke\Caltrops.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
