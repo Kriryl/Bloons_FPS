@@ -21,6 +21,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float loss = 1f;
     [SerializeField] private LayerMask layerMask;
 
+    private bool canAttack = false;
+
     Damage damageObject;
     ParticleSystem mainProjectile;
 
@@ -100,11 +102,11 @@ public class Player : MonoBehaviour
 
     private void CheckForInput()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             StartParticles();
         }
-        else
+        else if (Input.GetMouseButtonUp(0))
         {
             StopParticles();
         }
@@ -169,6 +171,7 @@ public class Player : MonoBehaviour
         {
             particleSystem.Stop();
         }
+        if (!canAttack) { return; }
         Invoke(nameof(StartParticles), 1f);
     }
 
@@ -186,6 +189,7 @@ public class Player : MonoBehaviour
                 particleSystem.Stop();
             }
         }
+        if (!canAttack) { return; }
         Invoke(nameof(StartParticles), 1f);
     }
 
@@ -199,23 +203,19 @@ public class Player : MonoBehaviour
 
     private void StartParticles()
     {
+        canAttack = true;
         foreach (ParticleSystem projectile in projectiles)
         {
-            if (!projectile.isPlaying)
-            {
-                projectile.Play();
-            }
+            projectile.Play();
         }
     }
 
     private void StopParticles()
     {
+        canAttack = false;
         foreach (ParticleSystem projectile in projectiles)
         {
-            if (!projectile.isStopped)
-            {
-                projectile.Stop();
-            }
+            projectile.Stop();
         }
     }
 
