@@ -85,11 +85,29 @@ public class Player : MonoBehaviour
     {
         damageObject = GetComponent<Damage>();
         mainProjectile = projectiles[0];
+        foreach (ParticleSystem particleSystem in projectiles)
+        {
+            ParticleSystem.MainModule main = particleSystem.main;
+            main.playOnAwake = false;
+        }
     }
 
     private void Update()
     {
+        CheckForInput();
         CalculateStats();
+    }
+
+    private void CheckForInput()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            StartParticles();
+        }
+        else
+        {
+            StopParticles();
+        }
     }
 
     private void CalculateStats()
@@ -183,7 +201,21 @@ public class Player : MonoBehaviour
     {
         foreach (ParticleSystem projectile in projectiles)
         {
-            projectile.Play();
+            if (!projectile.isPlaying)
+            {
+                projectile.Play();
+            }
+        }
+    }
+
+    private void StopParticles()
+    {
+        foreach (ParticleSystem projectile in projectiles)
+        {
+            if (!projectile.isStopped)
+            {
+                projectile.Stop();
+            }
         }
     }
 

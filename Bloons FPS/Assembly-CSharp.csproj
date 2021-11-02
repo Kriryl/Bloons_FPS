@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,6 +53,9 @@
     <UnityVersion>2021.1.17f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Player Upgrades\Dart Monke\MoreDarts.cs" />
     <Compile Include="Assets\General\BloonHealth.cs" />
     <Compile Include="Assets\Player Upgrades\Base.cs" />
@@ -73,6 +76,8 @@
     <Compile Include="Assets\General\Lives.cs" />
     <Compile Include="Assets\Starter\Welcome.cs" />
     <Compile Include="Assets\Banana\Banana.cs" />
+    <Compile Include="Assets\Bloons\BloonInfo.cs" />
+    <Compile Include="Assets\Player Upgrades\Ninja Monke\Caltrops.cs" />
     <Compile Include="Assets\Player Upgrades\Dart Monke\Jaggernaut.cs" />
     <Compile Include="Assets\Bloons\BloonType.cs" />
     <Compile Include="Assets\Player Upgrades\Dart Monke\BouncingDarts.cs" />
@@ -81,6 +86,7 @@
     <Compile Include="Assets\Player Upgrades\BaseUpgrade.cs" />
     <Compile Include="Assets\General\DeathController.cs" />
     <Compile Include="Assets\Player Upgrades\Ninja Monke\ImprovedSeeking.cs" />
+    <Compile Include="Assets\Player\CharacterGetter.cs" />
     <Compile Include="Assets\Player Upgrades\Ninja Monke\SeekingShurikens.cs" />
     <Compile Include="Assets\Money\Coins.cs" />
     <Compile Include="Assets\Waves\Waves.cs" />
@@ -88,9 +94,6 @@
     <Compile Include="Assets\Player\Characters.cs" />
     <Compile Include="Assets\General\ShopItem.cs" />
     <Compile Include="Assets\General\Damage.cs" />
-    <Compile Include="Assets\Player Upgrades\Ninja Monke\Caltrops.cs" />
-    <Compile Include="Assets\Bloons\BloonInfo.cs" />
-    <Compile Include="Assets\Player\CharacterGetter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
