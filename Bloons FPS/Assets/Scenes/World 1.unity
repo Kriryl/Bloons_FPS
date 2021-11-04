@@ -3470,6 +3470,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1468018227}
     m_Modifications:
+    - target: {fileID: 2597349314999442043, guid: fc137c421f1abee42a49e974c8acc330, type: 3}
+      propertyPath: upgrades.Array.data[2].cost
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 3775417771054774362, guid: fc137c421f1abee42a49e974c8acc330, type: 3}
       propertyPath: m_Name
       value: Ninja Monkey
