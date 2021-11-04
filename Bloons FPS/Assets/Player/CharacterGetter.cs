@@ -16,8 +16,6 @@ public class CharacterGetter : MonoBehaviour
 
         foreach (Transform t in characters)
         {
-            print(t.name);
-            print(t.name.ToLower() != characterName.ToLower());
             if (t.name.ToLower() != characterName.ToLower())
             {
                 t.gameObject.SetActive(false);
@@ -25,8 +23,6 @@ public class CharacterGetter : MonoBehaviour
         }
         foreach (Transform t in stores)
         {
-            print(t.name);
-            print(t.name.ToLower() != storeToken.ToLower());
             if (t.name.ToLower() != storeToken.ToLower())
             {
                 t.gameObject.SetActive(false);

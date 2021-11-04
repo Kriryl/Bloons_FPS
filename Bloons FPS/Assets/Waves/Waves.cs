@@ -66,7 +66,6 @@ public class Waves : MonoBehaviour
     {
         if (coins)
         {
-            print($"Round complete. Player rewarded ${rewardMoney} coins");
             coins.AddCoins(rewardMoney);
             rewardMoney += rewardIncrease;
         }

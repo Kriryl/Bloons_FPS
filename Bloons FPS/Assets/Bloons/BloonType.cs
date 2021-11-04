@@ -15,11 +15,17 @@ public class BloonType : Bloon
 
     private Sound sound;
     private BloonInfo bloonInfo;
+    private float startSpeed;
 
     private void Update()
     {
         IsOn = On;
         SeekPlayer(speed);
+    }
+
+    public void SetNormalSpeed()
+    {
+        speed = startSpeed;
     }
 
     private void OnEnable()
@@ -29,6 +35,13 @@ public class BloonType : Bloon
 
         bloonInfo = FindObjectOfType<BloonInfo>();
         bloonInfo.OnBloonSpawn(bloonName, this);
+
+        startSpeed = speed;
+    }
+
+    public static BloonType[] GetAllBloons()
+    {
+        return FindObjectsOfType<BloonType>();
     }
 
     private void OnParticleCollision(GameObject other)
