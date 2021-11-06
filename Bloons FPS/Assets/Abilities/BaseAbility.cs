@@ -14,11 +14,13 @@ public class BaseAbility : MonoBehaviour
     private float currentCooldown = 0f;
     private bool abilityActive = false;
     private bool canUse = false;
+    private float cooldownFrames;
 
     private void Start()
     {
+        cooldownFrames = baseCooldown * 50f;
         cooldownSlider.minValue = 0f;
-        cooldownSlider.maxValue = baseCooldown;
+        cooldownSlider.maxValue = cooldownFrames;
     }
 
     private void FixedUpdate()
@@ -26,7 +28,7 @@ public class BaseAbility : MonoBehaviour
         if (!abilityActive && !canUse)
         {
             currentCooldown++;
-            if (currentCooldown >= baseCooldown)
+            if (currentCooldown >= cooldownFrames)
             {
                 canUse = true;
             }

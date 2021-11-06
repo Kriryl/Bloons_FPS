@@ -28,7 +28,7 @@ public class Seeker : MonoBehaviour
             if (target)
             {
                 Vector3 directionTotarget = (target.position - particle.position).normalized;
-                Vector3 seekForce = directionTotarget * seekSpeed * Time.deltaTime;
+                Vector3 seekForce = seekSpeed * Time.deltaTime * directionTotarget;
                 particle.velocity += seekForce;
             }
             emittedParticles[i] = particle;

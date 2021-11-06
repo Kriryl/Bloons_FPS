@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Caltrops : Base
 {
-    public ParticleSystem caltropSpawner;
+    public GameObject caltropSpawner;
     public Vector3 pos;
 
     public override void OnUpgradeBought()

@@ -201,6 +201,14 @@ public class Player : MonoBehaviour
         projectile.transform.localPosition = mainProjectile.transform.localPosition + pos;
     }
 
+    public void AddIndepententBullet(GameObject projectiles, Vector3 pos)
+    {
+        GameObject projectile = Instantiate(projectiles);
+        projectile.transform.parent = Camera.main.transform;
+        projectile.transform.SetPositionAndRotation(Vector3.zero, new Quaternion(0, 0, 0, 0));
+        projectile.transform.localPosition = mainProjectile.transform.localPosition + pos;
+    }
+
     private void StartParticles()
     {
         canAttack = true;

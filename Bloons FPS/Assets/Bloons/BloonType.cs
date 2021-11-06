@@ -67,6 +67,14 @@ public class BloonType : Bloon
         {
             OnPlayerHit(livesTakenOnHit);
         }
+        else if (collision.gameObject.layer == LayerMask.NameToLayer("PlayerSpawned"))
+        {
+            Damage damage = collision.gameObject.GetComponent<Damage>();
+            if (damage)
+            {
+                OnDamageTaken(damage.damage, coinsOnDamage);
+            }
+        }
     }
 
     public override void OnDamageTaken(int damageAmount, int coinsToAdd)
