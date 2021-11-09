@@ -4,7 +4,7 @@ public class SeekingShurikens : Base
 
     public override void OnUpgradeBought()
     {
-        if (!IsActive()) { return; }
+        if (!AlreadyBought()) { return; }
         base.OnUpgradeBought();
 
         player.Range *= 2f;

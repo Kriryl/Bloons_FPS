@@ -6,7 +6,7 @@ public class MoreDarts : Base
     public Vector3 pos;
     public override void OnUpgradeBought()
     {
-        if (!IsActive())
+        if (!AlreadyBought())
         {
             return;
         }

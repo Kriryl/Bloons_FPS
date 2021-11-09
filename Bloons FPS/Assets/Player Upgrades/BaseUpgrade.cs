@@ -4,11 +4,14 @@ using System;
 public class BaseUpgrade : MonoBehaviour
 {
     public UpgradePath[] upgrades;
+    public SupportPath[] supportUpgrades;
+    private int supportLenght = 0;
     private int pathLenght = 0;
     private Coins coins;
 
     private void Start()
     {
+        supportLenght = supportUpgrades.Length;
         pathLenght = upgrades.Length;
         foreach(UpgradePath behaviour in upgrades)
         {
@@ -33,17 +36,37 @@ public class BaseUpgrade : MonoBehaviour
     public class UpgradePath
     {
         public Base upgradeBehaviour;
-        public float cost = 10;
+        public float cost = 10f;
     }
 
-    public void OnUpgrade(int index)
+    [Serializable]
+    public class SupportPath
     {
-        if (index + 1 <= pathLenght)
+        public Base supportBehaviour;
+        public float cost = 10f;
+    }
+
+    public void OnUpgrade(int index, bool isSupport)
+    {
+        if (isSupport)
         {
-            float cost = upgrades[index].cost;
-            coins.LoseCoins(cost);
-            upgrades[index].upgradeBehaviour.enabled = true;
-            BroadcastMessage("OnUpgradeBought");
+            if (index + 1 <= supportLenght)
+            {
+                float cost = supportUpgrades[index].cost;
+                coins.LoseCoins(cost);
+                supportUpgrades[index].supportBehaviour.enabled = true;
+                BroadcastMessage("OnSupportUpgradeBought");
+            }
+        }
+        else
+        {
+            if (index + 1 <= pathLenght)
+            {
+                float cost = upgrades[index].cost;
+                coins.LoseCoins(cost);
+                upgrades[index].upgradeBehaviour.enabled = true;
+                BroadcastMessage("OnUpgradeBought");
+            }
         }
     }
 }

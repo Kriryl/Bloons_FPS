@@ -18,7 +18,13 @@ public class Base : MonoBehaviour
         player = FindObjectOfType<Player>();
     }
 
-    public bool IsActive()
+    public virtual void OnSupportUpgradeBought()
+    {
+        isActive = true;
+        player = FindObjectOfType<Player>();
+    }
+
+    public bool AlreadyBought()
     {
         return enabled && !isActive;
     }

@@ -6,7 +6,7 @@ public class SpikedBall : Base
 
     public override void OnUpgradeBought()
     {
-        if (!IsActive()) { return; }
+        if (!AlreadyBought()) { return; }
 
         base.OnUpgradeBought();
 

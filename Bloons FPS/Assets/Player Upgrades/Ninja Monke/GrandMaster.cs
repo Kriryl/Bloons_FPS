@@ -7,7 +7,7 @@ public class GrandMaster : Base
 
     public override void OnUpgradeBought()
     {
-        if (!IsActive()) { return; }
+        if (!AlreadyBought()) { return; }
         base.OnUpgradeBought();
 
         player.AddBullet(projectileAddAmount, pos);

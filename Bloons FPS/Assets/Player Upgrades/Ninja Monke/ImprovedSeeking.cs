@@ -9,7 +9,7 @@ public class ImprovedSeeking : Base
 
     public override void OnUpgradeBought()
     {
-        if (!IsActive()) { return; }
+        if (!AlreadyBought()) { return; }
         base.OnUpgradeBought();
 
         player.LayerMask = layerMask;

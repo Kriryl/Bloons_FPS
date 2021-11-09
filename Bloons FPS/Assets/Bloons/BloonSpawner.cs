@@ -1,6 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class BloonSpawner : MonoBehaviour
 {
@@ -34,7 +34,7 @@ public class BloonSpawner : MonoBehaviour
 
     private void SpawnBloon()
     {
-        int randomNum = Random.Range(0, poolSize);
+        int randomNum = UnityEngine.Random.Range(0, poolSize);
         _ = Instantiate(bloonPool[randomNum], transform.position, transform.rotation);
     }
 

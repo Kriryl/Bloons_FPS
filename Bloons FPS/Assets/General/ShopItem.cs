@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class ShopItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public bool isLocked = false;
+    public bool isSupport = false;
     public int shopIndex = 0;
     public TextMeshProUGUI upgradeText;
     public TextMeshProUGUI costText;
@@ -52,7 +53,7 @@ public class ShopItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             {
                 shopItem.Display();
             }
-            baseUpgrade.OnUpgrade(shopIndex);
+            baseUpgrade.OnUpgrade(shopIndex, isSupport);
         }
     }
 

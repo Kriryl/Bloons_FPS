@@ -4,7 +4,7 @@ public class BouncingDarts : Base
 {
     public override void OnUpgradeBought()
     {
-        if (!IsActive())
+        if (!AlreadyBought())
         {
             return;
         }

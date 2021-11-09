@@ -10,6 +10,7 @@ public class Waves : MonoBehaviour
     public Wave[] waves;
     public float rewardMoney = 10f;
     public float rewardIncrease = 1f;
+    public float delay = 0f;
 
     private int numOfBloons = int.MaxValue;
     private bool spawnWave = false;
@@ -32,6 +33,11 @@ public class Waves : MonoBehaviour
     {
         maxWave = waves.Length;
         coins = FindObjectOfType<Coins>();
+        Invoke(nameof(StartWaves), delay);
+    }
+
+    private void StartWaves()
+    {
         _ = StartCoroutine(SpawnAllWaves());
     }
 

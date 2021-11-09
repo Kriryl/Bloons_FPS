@@ -32,7 +32,7 @@ public class Bloon : MonoBehaviour
 
     public void OnPlayerHit(int amount)
     {
-        lives = GetComponent<Lives>();
+        lives = FindObjectOfType<Lives>();
         lives.TakeLives(amount);
         Destroy(gameObject);
     }
