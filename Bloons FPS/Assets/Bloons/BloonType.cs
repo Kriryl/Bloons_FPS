@@ -30,12 +30,7 @@ public class BloonType : Bloon
 
     private void OnEnable()
     {
-        sound = FindObjectOfType<Sound>();
-        sound.OnBloonSpawn();
-
-        bloonInfo = FindObjectOfType<BloonInfo>();
-        bloonInfo.OnBloonSpawn(bloonName, this);
-
+        GlobalEventManager.CallEvent("OnBloonSpawn", this);
         startSpeed = speed;
     }
 

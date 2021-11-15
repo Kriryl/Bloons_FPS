@@ -14,9 +14,9 @@ public class BloonInfo : MonoBehaviour
     public const float RAINBOW_BLOON_SPEED = RED_BLOON_SPEED * 2.2f;
     public const float CERAMIC_BLOON_SPEED = RED_BLOON_SPEED * 2.5f;
 
-    public void OnBloonSpawn(string bloonName, BloonType bloonType)
+    private void OnBloonSpawn(BloonType bloonType)
     {
-        string lower = bloonName.ToLower();
+        string lower = bloonType.bloonName.ToLower();
         switch (lower)
         {
             case "red bloon":

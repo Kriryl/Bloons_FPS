@@ -49,6 +49,7 @@ public class Waves : MonoBehaviour
             DisplayWave(i);
             StartCoroutine(SpawnWave(waves[i]));
             yield return new WaitUntil(() => numOfBloons <= 0 && spawnWave);
+            GlobalEventManager.CallEvent("OnWaveComplete");
             RewardPlayer();
         }
     }
