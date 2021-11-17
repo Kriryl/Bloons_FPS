@@ -1,17 +1,20 @@
 using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Characters : MonoBehaviour
 {
     public const string SELECTED_CHARACTER = "Selected character";
     public const string SELECTED_CHARACTER_STORE = "Store";
 
+    public GameObject characterButton;
+
     public Character[] characters;
 
     public BaseUpgrade BaseUpgrade => SelectedCharacter.character;
 
     public Character SelectedCharacter { get; private set; }
+
+    private bool setCharacterButton = true;
 
     public string CharacterName
     {
@@ -37,6 +40,12 @@ public class Characters : MonoBehaviour
         public string name = string.Empty;
     }
 
+    public void ToggleCharacters()
+    {
+        characterButton.SetActive(setCharacterButton);
+        setCharacterButton = !setCharacterButton;
+    }
+
     public void SelectCharacter(string refrenceName)
     {
         string token = "";
@@ -54,7 +63,6 @@ public class Characters : MonoBehaviour
         {
             PlayerPrefs.SetString(SELECTED_CHARACTER, refrenceName);
             PlayerPrefs.SetString(SELECTED_CHARACTER_STORE, token);
-            AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }

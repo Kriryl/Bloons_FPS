@@ -33,7 +33,7 @@ public class Waves : MonoBehaviour
     {
         maxWave = waves.Length;
         coins = FindObjectOfType<Coins>();
-        Invoke(nameof(StartWaves), delay);
+        StartWaves();
     }
 
     private void StartWaves()
@@ -45,6 +45,7 @@ public class Waves : MonoBehaviour
     {
         for (int i = 0; i < waves.Length; i++)
         {
+            yield return new WaitForSeconds(delay);
             spawnWave = false;
             DisplayWave(i);
             StartCoroutine(SpawnWave(waves[i]));
@@ -52,6 +53,7 @@ public class Waves : MonoBehaviour
             GlobalEventManager.CallEvent("OnWaveComplete");
             RewardPlayer();
         }
+        GlobalEventManager.CallEvent("OnAllWavesComplete");
     }
 
     private IEnumerator SpawnWave(Wave wave)

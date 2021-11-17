@@ -16,7 +16,6 @@ public class GlobalEventManager : MonoBehaviour
         {
             monoBehaviour.BroadcastMessage(eventName, SendMessageOptions.DontRequireReceiver);
         }
-        print(eventName + " called.");
     }
     /// <summary>
     /// Calls the method eventName on every Monobehaviour, and passes in _object as a parameter.

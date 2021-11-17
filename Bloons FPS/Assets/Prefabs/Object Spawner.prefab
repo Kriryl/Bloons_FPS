@@ -43,5 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37db470c24b4d1947a81034cbd49cc12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileToSpawn: {fileID: 2589864724977940199, guid: 403d0ae223ea8ed4dbe4b9cec8bd105b, type: 3}
+  projectileToSpawn: {fileID: 2589864724977940199, guid: 8bfe119a798c26d45853e796eb52e2e5, type: 3}
   spawnRate: 1.5
+  velocity: 5

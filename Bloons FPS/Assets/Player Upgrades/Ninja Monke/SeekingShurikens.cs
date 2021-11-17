@@ -7,7 +7,7 @@ public class SeekingShurikens : Base
         if (!AlreadyBought()) { return; }
         base.OnUpgradeBought();
 
-        player.Range *= 2f;
+        player.Range += 3f;
         seeker.enabled = true;
     }
 }

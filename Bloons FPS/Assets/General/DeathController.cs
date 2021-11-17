@@ -1,18 +1,18 @@
+using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class DeathController : MonoBehaviour
 {
-    int currentScene = 0;
+    public float delay = 2f;
 
-    public int GetCurrentScene()
+    public void Restart()
     {
-        currentScene = SceneManager.GetActiveScene().buildIndex;
-        return currentScene;
+        _ = StartCoroutine(RestartScene());
     }
 
-    public void RestartScene()
+    private IEnumerator RestartScene()
     {
-        SceneManager.LoadScene(GetCurrentScene());
+        yield return new WaitForSeconds(delay);
+        SceneLoader.RestartScene();
     }
 }

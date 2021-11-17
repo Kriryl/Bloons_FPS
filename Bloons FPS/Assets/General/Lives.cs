@@ -20,7 +20,7 @@ public class Lives : MonoBehaviour
         DisplayLives();
         if (lives <= 0)
         {
-            deathController.RestartScene();
+            deathController.Restart();
         }
     }
 
