@@ -28,6 +28,8 @@ public class Bloon : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         player = FindObjectOfType<Player>().gameObject;
         BloonHealth = GetComponent<BloonHealth>();
+
+        agent.autoBraking = false;
     }
 
     public void OnPlayerHit(int amount)
@@ -50,6 +52,7 @@ public class Bloon : MonoBehaviour
     {
         try
         {
+            coin = FindObjectOfType<Coins>();
             coin.AddCoins(coinsToAdd);
         }
         catch

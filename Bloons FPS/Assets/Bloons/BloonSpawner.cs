@@ -12,6 +12,8 @@ public class BloonSpawner : MonoBehaviour
     public float rampStart = 60f;
     public bool hasRamped = false;
     public bool isOn = true;
+    public bool isDummy = false;
+    public Vector3 destination;
 
     private int poolSize;
 
@@ -35,7 +37,12 @@ public class BloonSpawner : MonoBehaviour
     private void SpawnBloon()
     {
         int randomNum = UnityEngine.Random.Range(0, poolSize);
-        _ = Instantiate(bloonPool[randomNum], transform.position, transform.rotation);
+        GameObject bloonType = Instantiate(bloonPool[randomNum], transform.position, transform.rotation).gameObject;
+        if (isDummy)
+        {
+            Destroy(bloonType.GetComponent<BloonType>());
+            bloonType.AddComponent<Dummy>().destination = destination;
+        }
     }
 
     public void SpawnBloon(BloonType bloon)

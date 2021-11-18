@@ -3009,6 +3009,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sound Chooser
       objectReference: {fileID: 0}
+    - target: {fileID: 6246126643246748184, guid: f502a780e9936964ca3756becfcc7e7c, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246126643246748184, guid: f502a780e9936964ca3756becfcc7e7c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a8b37ef2dfa81994aae614be2bd4bf38, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f502a780e9936964ca3756becfcc7e7c, type: 3}
 --- !u!1001 &300846600121320515

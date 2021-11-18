@@ -53,6 +53,7 @@
     <UnityVersion>2021.1.17f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scenes\LoadingScreen.cs" />
     <Compile Include="Assets\General\WinController.cs" />
     <Compile Include="Assets\Player Upgrades\Dart Monke\MoreDarts.cs" />
     <Compile Include="Assets\General\BloonHealth.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\Player Upgrades\Ninja Monke\Caltrops.cs" />
     <Compile Include="Assets\Player Upgrades\Dart Monke\Jaggernaut.cs" />
     <Compile Include="Assets\Abilities\Ninja\Sabotage.cs" />
+    <Compile Include="Assets\Scenes\SceneLoader.cs" />
     <Compile Include="Assets\Bloons\BloonType.cs" />
     <Compile Include="Assets\Player Upgrades\Dart Monke\BouncingDarts.cs" />
     <Compile Include="Assets\Banana\Magnet.cs" />
@@ -92,15 +94,14 @@
     <Compile Include="Assets\Player Upgrades\Ninja Monke\SeekingShurikens.cs" />
     <Compile Include="Assets\General\GlobalEventManager.cs" />
     <Compile Include="Assets\Money\Coins.cs" />
+    <Compile Include="Assets\Starter\MainMenu.cs" />
     <Compile Include="Assets\Waves\Waves.cs" />
     <Compile Include="Assets\Player Upgrades\Ninja Monke\Caltrop.cs" />
     <Compile Include="Assets\Bloons\BloonSpawner.cs" />
     <Compile Include="Assets\Player\Characters.cs" />
     <Compile Include="Assets\General\ShopItem.cs" />
     <Compile Include="Assets\General\Damage.cs" />
-    <Compile Include="Assets\Scenes\SceneLoader.cs" />
-    <Compile Include="Assets\Scenes\LoadingScreen.cs" />
-    <Compile Include="Assets\Starter\MainMenu.cs" />
+    <Compile Include="Assets\Starter\Dummy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

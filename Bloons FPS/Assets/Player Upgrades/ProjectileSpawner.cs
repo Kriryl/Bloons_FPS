@@ -22,7 +22,7 @@ public class ProjectileSpawner : MonoBehaviour
             Rigidbody rb = newProjectile.GetComponent<Rigidbody>();
             if (rb)
             {
-                rb.AddForce(Vector3.forward * velocity);
+                rb.AddRelativeForce(Vector3.forward * velocity);
             }
         }
     }

@@ -8,13 +8,13 @@ public class Difficulty : MonoBehaviour
     public const int NORMAL_MODE_HEALTH = 150;
     public const int HARD_MODE_HEALTH = 1;
 
-    public void SelectDifficulty(string difficulty)
+    public static void SelectDifficulty(string difficulty)
     {
         if (difficulty.ToLower() == "easy")
         {
             PlayerPrefs.SetInt(DIFFICULTY, EASY_MODE_HEALTH);
         }
-        else if (difficulty.ToLower() == "normal")
+        else if (difficulty.ToLower() == "medium")
         {
             PlayerPrefs.SetInt(DIFFICULTY, NORMAL_MODE_HEALTH);
         }
@@ -22,7 +22,10 @@ public class Difficulty : MonoBehaviour
         {
             PlayerPrefs.SetInt(DIFFICULTY, HARD_MODE_HEALTH);
         }
-        BroadcastMessage("OnDifficultySelect");
+        else
+        {
+            print("Error: Difficulty not found");
+        }
     }
 
     public static int GetStartingHealth()

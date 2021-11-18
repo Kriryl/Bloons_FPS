@@ -13,9 +13,9 @@ public class BloonType : Bloon
     public int damageLeft = 0;
     public bool affectsChildren = true;
 
-    private Sound sound;
-    private BloonInfo bloonInfo;
     private float startSpeed;
+
+    public string Name => bloonName;
 
     private void Update()
     {
@@ -32,6 +32,7 @@ public class BloonType : Bloon
     {
         GlobalEventManager.CallEvent("OnBloonSpawn", this);
         startSpeed = speed;
+
     }
 
     public static BloonType[] GetAllBloons()
