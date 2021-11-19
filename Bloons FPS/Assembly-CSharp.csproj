@@ -96,12 +96,13 @@
     <Compile Include="Assets\Money\Coins.cs" />
     <Compile Include="Assets\Starter\MainMenu.cs" />
     <Compile Include="Assets\Waves\Waves.cs" />
+    <Compile Include="Assets\Starter\Dummy.cs" />
     <Compile Include="Assets\Player Upgrades\Ninja Monke\Caltrop.cs" />
     <Compile Include="Assets\Bloons\BloonSpawner.cs" />
     <Compile Include="Assets\Player\Characters.cs" />
     <Compile Include="Assets\General\ShopItem.cs" />
     <Compile Include="Assets\General\Damage.cs" />
-    <Compile Include="Assets\Starter\Dummy.cs" />
+    <Compile Include="Assets\General\PauseScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

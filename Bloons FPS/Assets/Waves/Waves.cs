@@ -5,7 +5,7 @@ using TMPro;
 
 public class Waves : MonoBehaviour
 {
-    public BloonSpawner spawner;
+    public BloonSpawner[] spawners;
     public TextMeshProUGUI waveDisplay;
     public Wave[] waves;
     public float rewardMoney = 10f;
@@ -60,7 +60,10 @@ public class Waves : MonoBehaviour
     {
         for (int i = 0; i < wave.bloons.Length; i++)
         {
-            spawner.SpawnBloon(wave.bloons[i]);
+            foreach (BloonSpawner bloonSpawner in spawners)
+            {
+                bloonSpawner.SpawnBloon(wave.bloons[i]);
+            }
             yield return new WaitForSeconds(wave.interval);
         }
         spawnWave = true;

@@ -42,7 +42,7 @@ public class SceneLoader : MonoBehaviour
         return SceneManager.LoadSceneAsync(index);
     }
 
-    public static void PlayAgain()
+    public static void ReturnToMainMenu()
     {
         SceneManager.LoadScene(0);
     }

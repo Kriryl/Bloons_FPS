@@ -39,17 +39,14 @@ public class Seeker : MonoBehaviour
 
     private void FindNearestBloon(ParticleSystem.Particle particle)
     {
-        if (!target)
-        {
-            float distance = float.MaxValue;
+        float distance = float.MaxValue;
 
-            foreach (BloonType bloon in bloonTypes)
+        foreach (BloonType bloon in bloonTypes)
+        {
+            if (Vector3.Distance(bloon.transform.position, particle.position) < distance)
             {
-                if (Vector3.Distance(bloon.transform.position, particle.position) < distance)
-                {
-                    distance = Vector3.Distance(bloon.transform.position, particle.position);
-                    target = bloon.transform;
-                }
+                distance = Vector3.Distance(bloon.transform.position, particle.position);
+                target = bloon.transform;
             }
         }
     }

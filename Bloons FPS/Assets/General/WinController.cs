@@ -24,7 +24,7 @@ public class WinController : MonoBehaviour
     public void MainMenu()
     {
         Cursor.lockState = CursorLockMode.None;
-        SceneLoader.PlayAgain();
+        SceneLoader.ReturnToMainMenu();
     }
 
     internal void OnAllWavesComplete()
