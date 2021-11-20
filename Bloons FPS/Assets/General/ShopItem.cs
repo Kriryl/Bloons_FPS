@@ -43,7 +43,7 @@ public class ShopItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         }
     }
 
-    public void ButItem()
+    public void BuyItem()
     {
         if (!isLocked && baseUpgrade.CanAfford(shopIndex))
         {

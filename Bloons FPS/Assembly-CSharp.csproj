@@ -89,6 +89,7 @@
     <Compile Include="Assets\Player\Player.cs" />
     <Compile Include="Assets\Player Upgrades\BaseUpgrade.cs" />
     <Compile Include="Assets\General\DeathController.cs" />
+    <Compile Include="Assets\General\PauseScreen.cs" />
     <Compile Include="Assets\Player Upgrades\Ninja Monke\ImprovedSeeking.cs" />
     <Compile Include="Assets\Player\CharacterGetter.cs" />
     <Compile Include="Assets\Player Upgrades\Ninja Monke\SeekingShurikens.cs" />
@@ -102,7 +103,7 @@
     <Compile Include="Assets\Player\Characters.cs" />
     <Compile Include="Assets\General\ShopItem.cs" />
     <Compile Include="Assets\General\Damage.cs" />
-    <Compile Include="Assets\General\PauseScreen.cs" />
+    <Compile Include="Assets\Starter\MainMenuSelect.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
