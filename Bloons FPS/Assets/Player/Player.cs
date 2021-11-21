@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float loss = 1f;
     [SerializeField] private LayerMask layerMask;
 
-    private bool canAttack = false;
+    private float nextTimeToFire = 0f;
 
     Damage damageObject;
     ParticleSystem mainProjectile;
@@ -95,20 +95,8 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        CheckForInput();
+        FireIfReady();
         CalculateStats();
-    }
-
-    private void CheckForInput()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            StartParticles();
-        }
-        else if (Input.GetMouseButtonUp(0))
-        {
-            StopParticles();
-        }
     }
 
     private void CalculateStats()
@@ -117,7 +105,6 @@ public class Player : MonoBehaviour
         {
             damageObject.damage = damage;
             ShotSpeedAndRange();
-            AttackSpeed();
             Accuracy();
             SetMesh();
             CollisionStuff();
@@ -128,12 +115,6 @@ public class Player : MonoBehaviour
                 main.startSpeed = shotSpeed;
                 main.startLifetime = range;
                 main.startSize = projectileSize;
-            }
-
-            void AttackSpeed()
-            {
-                ParticleSystem.EmissionModule emission = projectile.emission;
-                emission.rateOverTime = new ParticleSystem.MinMaxCurve(attackSpeed);
             }
 
             void Accuracy()
@@ -170,8 +151,6 @@ public class Player : MonoBehaviour
         {
             particleSystem.Stop();
         }
-        if (!canAttack) { return; }
-        Invoke(nameof(StartParticles), 1f);
     }
 
     public void AddBullet(int num, Vector3 pos)
@@ -188,8 +167,6 @@ public class Player : MonoBehaviour
                 particleSystem.Stop();
             }
         }
-        if (!canAttack) { return; }
-        Invoke(nameof(StartParticles), 1f);
     }
 
     public void AddIndepententBullet(ParticleSystem projectiles, Vector3 pos)
@@ -208,21 +185,21 @@ public class Player : MonoBehaviour
         projectile.transform.localPosition = mainProjectile.transform.localPosition + pos;
     }
 
-    private void StartParticles()
+    private void FireProjectile()
     {
-        canAttack = true;
-        foreach (ParticleSystem projectile in projectiles)
+        foreach (ParticleSystem particleSystem in projectiles)
         {
-            projectile.Play();
+            particleSystem.Emit(1);
         }
     }
 
-    private void StopParticles()
+    private void FireIfReady()
     {
-        canAttack = false;
-        foreach (ParticleSystem projectile in projectiles)
+        if (Input.GetMouseButton(0) && Time.time >= nextTimeToFire)
         {
-            projectile.Stop();
+            if (attackSpeed <= 0) { return; }
+            nextTimeToFire = Time.time + (1f / attackSpeed);
+            FireProjectile();
         }
     }
 

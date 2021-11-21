@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SpikedBall : Base
 {
-    public Mesh ballProjectile;
+    public GameObject ballProjectile;
 
     public override void OnUpgradeBought()
     {
@@ -13,6 +13,6 @@ public class SpikedBall : Base
         player.Damage *= 2;
         player.Range *= 1.5f;
         player.ShotSpeed += 5f;
-        player.Mesh = ballProjectile;
+        player.Mesh = ballProjectile.transform.GetChild(0).GetComponent<MeshFilter>().mesh;
     }
 }

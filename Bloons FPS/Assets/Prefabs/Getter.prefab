@@ -118,6 +118,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2179724338203936777}
     m_Modifications:
+    - target: {fileID: 570631047267377938, guid: 4e538a60e46253342b7d262c8ca3f40b, type: 3}
+      propertyPath: description
+      value: Increase attack speed and range.
+      objectReference: {fileID: 0}
+    - target: {fileID: 570631047770584423, guid: 4e538a60e46253342b7d262c8ca3f40b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 570631047803274571, guid: 4e538a60e46253342b7d262c8ca3f40b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 570631048335867535, guid: 4e538a60e46253342b7d262c8ca3f40b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyItem
+      objectReference: {fileID: 0}
     - target: {fileID: 570631048492910209, guid: 4e538a60e46253342b7d262c8ca3f40b, type: 3}
       propertyPath: m_Name
       value: Ninja Monkey Shop
@@ -166,6 +182,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 570631049041512322, guid: 4e538a60e46253342b7d262c8ca3f40b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 570631049148799652, guid: 4e538a60e46253342b7d262c8ca3f40b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BuyItem
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e538a60e46253342b7d262c8ca3f40b, type: 3}
 --- !u!4 &2179724338341835477 stripped
@@ -173,6 +197,159 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 570631048492910212, guid: 4e538a60e46253342b7d262c8ca3f40b, type: 3}
   m_PrefabInstance: {fileID: 1861295438068053073}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2179724338055939160
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 9033560893815960086}
+    m_Modifications:
+    - target: {fileID: 3236403982841602437, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141427896610535, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141427896610535, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141427896610537, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428117875413, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372965, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: shopIndex
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372965, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: description
+      value: Hurls a giant spiked ball that does massive damage.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372965, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: upgradeName
+      value: Jaggernaut
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 175.00002
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372966, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372969, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_Name
+      value: Item (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171141428922372969, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7181317996516269531, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737921032319628880, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e56c73e4ff8cef84eb0a230422eebdf7, type: 3}
 --- !u!1001 &2179724339132491646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -180,6 +357,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2179724338203936777}
     m_Modifications:
+    - target: {fileID: 2699799014655496806, guid: 3c0fc9d7b240f4a4a93117eefbaba17c, type: 3}
+      propertyPath: description
+      value: Darts now bounce off of objects.
+      objectReference: {fileID: 0}
     - target: {fileID: 7161366044591204896, guid: 3c0fc9d7b240f4a4a93117eefbaba17c, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -228,11 +409,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dart Monkey Shop
       objectReference: {fileID: 0}
+    - target: {fileID: 7161366045548335030, guid: 3c0fc9d7b240f4a4a93117eefbaba17c, type: 3}
+      propertyPath: description
+      value: Increases attack speed by 50%.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9021295560298099641, guid: 3c0fc9d7b240f4a4a93117eefbaba17c, type: 3}
+      propertyPath: description
+      value: Converts the dart to spiked balls.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c0fc9d7b240f4a4a93117eefbaba17c, type: 3}
 --- !u!4 &9033560893268741470 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7161366044591204896, guid: 3c0fc9d7b240f4a4a93117eefbaba17c, type: 3}
+  m_PrefabInstance: {fileID: 2179724339132491646}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &9033560893815960086 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7161366045129790824, guid: 3c0fc9d7b240f4a4a93117eefbaba17c, type: 3}
   m_PrefabInstance: {fileID: 2179724339132491646}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2179724339199293474
@@ -242,6 +436,42 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2179724338058607979}
     m_Modifications:
+    - target: {fileID: 2370272925197946216, guid: 972ce8a9824d15040af30db51ae3f878, type: 3}
+      propertyPath: upgrades.Array.data[2].cost
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370272925197946216, guid: 972ce8a9824d15040af30db51ae3f878, type: 3}
+      propertyPath: upgrades.Array.data[3].cost
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370272925197946216, guid: 972ce8a9824d15040af30db51ae3f878, type: 3}
+      propertyPath: upgrades.Array.data[4].cost
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370272925197946222, guid: 972ce8a9824d15040af30db51ae3f878, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370272925197946223, guid: 972ce8a9824d15040af30db51ae3f878, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370272925822536173, guid: 972ce8a9824d15040af30db51ae3f878, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370272925822536174, guid: 972ce8a9824d15040af30db51ae3f878, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370272925822536174, guid: 972ce8a9824d15040af30db51ae3f878, type: 3}
+      propertyPath: ballProjectile
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370272925822536175, guid: 972ce8a9824d15040af30db51ae3f878, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3498100296933551945, guid: 972ce8a9824d15040af30db51ae3f878, type: 3}
       propertyPath: m_Name
       value: Dart Monkey
@@ -304,6 +534,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2179724338058607979}
     m_Modifications:
+    - target: {fileID: 3775417771054774359, guid: fc137c421f1abee42a49e974c8acc330, type: 3}
+      propertyPath: rangeMultiplier
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3775417771054774362, guid: fc137c421f1abee42a49e974c8acc330, type: 3}
       propertyPath: m_Name
       value: Ninja Monkey
