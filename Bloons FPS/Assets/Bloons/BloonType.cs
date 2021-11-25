@@ -138,6 +138,7 @@ public class BloonType : Bloon
                 bloonType.gameObject.SetActive(true);
             }
         }
+        GlobalEventManager.CallEvent("OnBloonDeath", children);
         Destroy(gameObject);
     }
 }
