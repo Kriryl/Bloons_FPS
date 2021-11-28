@@ -12,17 +12,18 @@ public class Freeze : MonoBehaviour
 
         foreach (BloonType bloon in bloons)
         {
-            bloon.speed = 0f;
+            bloon.Freeze();
             GameObject newFreezeEffect = Instantiate(freezeVFX, bloon.transform);
             newFreezeEffect.transform.localPosition = new Vector3(0f, 0.65f, 0f);
             _ = StartCoroutine(UnfreezeBloon(bloon, newFreezeEffect));
         }
     }
 
-    private IEnumerator UnfreezeBloon(BloonType bloon, GameObject freeze)
+    private IEnumerator UnfreezeBloon(BloonType bloon, GameObject vfx)
     {
         yield return new WaitForSeconds(freezeDuration);
         bloon.SetNormalSpeed();
-        Destroy(freeze);
+        GlobalEventManager.CallEvent("OnBloonCooled", bloon);
+        Destroy(vfx);
     }
 }

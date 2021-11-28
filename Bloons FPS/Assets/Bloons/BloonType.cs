@@ -11,10 +11,15 @@ public class BloonType : Bloon
     [HideInInspector()]
     public int damageLeft = 0;
     public bool affectsChildren = true;
-
     private float startSpeed;
 
+    public bool IsFrozen { get; private set; } = false;
+
     public string Name => bloonName;
+
+    public float Speed { get => speed; set => speed = value; }
+
+    public float StartingSpeed => startSpeed;
 
     private void Update()
     {
@@ -25,6 +30,18 @@ public class BloonType : Bloon
     public void SetNormalSpeed()
     {
         speed = startSpeed;
+    }
+
+    public void Freeze()
+    {
+        IsFrozen = true;
+        speed = 0f;
+    }
+
+    public void Unfreeze()
+    {
+        SetNormalSpeed();
+        IsFrozen = false;
     }
 
     private void OnEnable()

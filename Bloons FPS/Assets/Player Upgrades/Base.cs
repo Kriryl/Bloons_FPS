@@ -29,3 +29,11 @@ public class Base : MonoBehaviour
         return enabled && !isActive;
     }
 }
+
+//public override void OnUpgradeBought()
+//{
+//    if (!AlreadyBought()) { return; }
+//    base.OnUpgradeBought();
+
+
+//}
