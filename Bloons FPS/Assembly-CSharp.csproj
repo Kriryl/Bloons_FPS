@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,11 +53,15 @@
     <UnityVersion>2021.1.17f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Scenes\LoadingScreen.cs" />
     <Compile Include="Assets\General\WinController.cs" />
     <Compile Include="Assets\Player Upgrades\Dart Monke\MoreDarts.cs" />
     <Compile Include="Assets\General\BloonHealth.cs" />
     <Compile Include="Assets\Player Upgrades\Base.cs" />
+    <Compile Include="Assets\Player Upgrades\Ice Monke\DeepFreeze.cs" />
     <Compile Include="Assets\Bloons\Bloon.cs" />
     <Compile Include="Assets\Player Upgrades\Dart Monke\SpikedBall.cs" />
     <Compile Include="Assets\Banana\BananaTree.cs" />
@@ -73,7 +77,9 @@
     <Compile Include="Assets\General\Timer.cs" />
     <Compile Include="Assets\Player Upgrades\Ninja Monke\GrandMaster.cs" />
     <Compile Include="Assets\Player Upgrades\Ice Monke\EnchantedFreezing.cs" />
+    <Compile Include="Assets\Bloons\Hirachy.cs" />
     <Compile Include="Assets\Player Upgrades\Ninja Monke\NinjaDicipline.cs" />
+    <Compile Include="Assets\Abilities\Ice\SnowStorm.cs" />
     <Compile Include="Assets\Starter\MainMenuSelect.cs" />
     <Compile Include="Assets\General\Upgrades.cs" />
     <Compile Include="Assets\General\Shop.cs" />
@@ -86,6 +92,7 @@
     <Compile Include="Assets\Abilities\Ninja\Sabotage.cs" />
     <Compile Include="Assets\Scenes\SceneLoader.cs" />
     <Compile Include="Assets\Bloons\BloonType.cs" />
+    <Compile Include="Assets\Player Upgrades\Ice Monke\PermaFrost.cs" />
     <Compile Include="Assets\Player Upgrades\Dart Monke\BouncingDarts.cs" />
     <Compile Include="Assets\Banana\Magnet.cs" />
     <Compile Include="Assets\Bloons\Freeze.cs" />
@@ -106,8 +113,6 @@
     <Compile Include="Assets\Player\Characters.cs" />
     <Compile Include="Assets\General\ShopItem.cs" />
     <Compile Include="Assets\General\Damage.cs" />
-    <Compile Include="Assets\Player Upgrades\Ice Monke\DeepFreeze.cs" />
-    <Compile Include="Assets\Player Upgrades\Ice Monke\PermaFrost.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

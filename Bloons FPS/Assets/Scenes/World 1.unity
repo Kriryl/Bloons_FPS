@@ -4345,22 +4345,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1190693241089683467, guid: 03f0f589262a29a449b7db0c792ada01, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -171.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1190693241089683467, guid: 03f0f589262a29a449b7db0c792ada01, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -197
-      objectReference: {fileID: 0}
-    - target: {fileID: 1190693241692063578, guid: 03f0f589262a29a449b7db0c792ada01, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 28.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1190693241692063578, guid: 03f0f589262a29a449b7db0c792ada01, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -197
-      objectReference: {fileID: 0}
     - target: {fileID: 1190693241922107482, guid: 03f0f589262a29a449b7db0c792ada01, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4448,14 +4432,6 @@ PrefabInstance:
     - target: {fileID: 1190693241922107489, guid: 03f0f589262a29a449b7db0c792ada01, type: 3}
       propertyPath: m_Name
       value: Coin  & Lives Canvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 1190693241922107492, guid: 03f0f589262a29a449b7db0c792ada01, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1190693241922107494, guid: 03f0f589262a29a449b7db0c792ada01, type: 3}
-      propertyPath: coinAmount
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03f0f589262a29a449b7db0c792ada01, type: 3}
@@ -4691,6 +4667,10 @@ PrefabInstance:
     - target: {fileID: 2179724338921845983, guid: d74e57f1c03309f498e70ecc9a5482b0, type: 3}
       propertyPath: m_Name
       value: Getter
+      objectReference: {fileID: 0}
+    - target: {fileID: 3213045668097508115, guid: d74e57f1c03309f498e70ecc9a5482b0, type: 3}
+      propertyPath: m_Name
+      value: Ability
       objectReference: {fileID: 0}
     - target: {fileID: 3365402864572013634, guid: d74e57f1c03309f498e70ecc9a5482b0, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar

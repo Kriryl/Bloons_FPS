@@ -13,10 +13,15 @@ public class Freeze : MonoBehaviour
         foreach (BloonType bloon in bloons)
         {
             bloon.Freeze();
-            GameObject newFreezeEffect = Instantiate(freezeVFX, bloon.transform);
-            newFreezeEffect.transform.localPosition = new Vector3(0f, 0.65f, 0f);
-            _ = StartCoroutine(UnfreezeBloon(bloon, newFreezeEffect));
+            _ = StartCoroutine(UnfreezeBloon(bloon, ApplyFreeze(bloon)));
         }
+    }
+
+    public GameObject ApplyFreeze(BloonType bloon)
+    {
+        GameObject newFreezeEffect = Instantiate(freezeVFX, bloon.transform);
+        newFreezeEffect.transform.localPosition = new Vector3(0f, 0.65f, 0f);
+        return newFreezeEffect;
     }
 
     private IEnumerator UnfreezeBloon(BloonType bloon, GameObject vfx)
