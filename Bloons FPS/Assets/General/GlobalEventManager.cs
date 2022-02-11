@@ -29,6 +29,34 @@ public class GlobalEventManager : MonoBehaviour
         {
             monoBehaviour.BroadcastMessage(eventName, _Object, SendMessageOptions.DontRequireReceiver);
         }
-        print(eventName + " called.");
+    }
+
+    /// <summary>
+    /// A class used to store info about an event call.
+    /// </summary>
+    public class EventInfo
+    {
+        public BloonType[] children;
+        public GameObject _Object;
+
+        public EventInfo(BloonType[] children, GameObject _Object)
+        {
+            this.children = children;
+            this._Object = _Object;
+        }
+    }
+
+    /// <summary>
+    /// Calls the method eventName on every Monobehaviour, and passes in eventInfo as a parameter.
+    /// </summary>
+    /// <param name="eventName">The name of the method to call.</param>
+    /// <param name="eventInfo">The info you want passed in the method.</param>
+    public static void CallEvent(string eventName, EventInfo eventInfo)
+    {
+        MonoBehaviour[] monoBehaviours = FindObjectsOfType<MonoBehaviour>();
+        foreach (MonoBehaviour monoBehaviour in monoBehaviours)
+        {
+            monoBehaviour.BroadcastMessage(eventName, eventInfo, SendMessageOptions.DontRequireReceiver);
+        }
     }
 }

@@ -61,14 +61,14 @@ public class BloonType : Bloon
         Damage damage = other.GetComponentInParent<Damage>();
         if (damage)
         {
-            OnDamageTaken(damage.damage, coinsOnDamage);
+            OnDamageTaken(damage.damage, coinsOnDamage, other);
         }
         else
         {
             damage = other.GetComponent<Damage>();
             if (damage)
             {
-                OnDamageTaken(damage.damage, coinsOnDamage);
+                OnDamageTaken(damage.damage, coinsOnDamage, other);
             }
         }
     }
@@ -84,19 +84,19 @@ public class BloonType : Bloon
             Damage damage = collision.gameObject.GetComponent<Damage>();
             if (damage)
             {
-                OnDamageTaken(damage.damage, coinsOnDamage);
+                OnDamageTaken(damage.damage, coinsOnDamage, collision.gameObject);
             }
         }
     }
 
-    public override void OnDamageTaken(int damageAmount, int coinsToAdd)
+    public override void OnDamageTaken(int damageAmount, int coinsToAdd, GameObject other)
     {
         BloonHealth = GetComponent<BloonHealth>();
         if (damageAmount > BloonHealth.health)
         {
             damageLeft = damageAmount - Health;
         }
-        base.OnDamageTaken(damageAmount, damageAmount);
+        base.OnDamageTaken(damageAmount, damageAmount, other);
     }
 
     public override void SeekPlayer(float speed)
@@ -104,7 +104,7 @@ public class BloonType : Bloon
         base.SeekPlayer(speed);
     }
 
-    internal void OnDeath()
+    internal void OnDeath(GameObject other)
     {
         if (damageLeft > 0 && affectsChildren)
         {
@@ -115,7 +115,7 @@ public class BloonType : Bloon
         }
         GameObject pop = Instantiate(popvfx, transform.position, transform.rotation).gameObject;
         Destroy(pop, 1f);
-        SpawnChildren();
+        SpawnChildren(other);
     }
 
     private void OverKill()
@@ -144,7 +144,7 @@ public class BloonType : Bloon
         }
     }
 
-    private void SpawnChildren()
+    private void SpawnChildren(GameObject other)
     {
         foreach (BloonType bloonType in children)
         {
@@ -155,7 +155,10 @@ public class BloonType : Bloon
                 bloonType.gameObject.SetActive(true);
             }
         }
-        GlobalEventManager.CallEvent("OnBloonDeath", children);
+
+        GlobalEventManager.EventInfo eventInfo = new GlobalEventManager.EventInfo(children, other);
+
+        GlobalEventManager.CallEvent("OnBloonDeath", eventInfo);
         Destroy(gameObject);
     }
 }

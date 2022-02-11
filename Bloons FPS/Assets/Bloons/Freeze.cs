@@ -6,11 +6,16 @@ public class Freeze : MonoBehaviour
     public float freezeDuration = 1f;
     public GameObject freezeVFX;
 
-    internal void OnBloonDeath(BloonType[] bloons)
+    internal void OnBloonDeath(GlobalEventManager.EventInfo eventInfo)
     {
-        if (bloons.Length <= 0) { return; }
+        if (eventInfo.children.Length <= 0) { return; }
 
-        foreach (BloonType bloon in bloons)
+        if (eventInfo._Object.GetComponentInParent<Freeze>() == null)
+        {
+            return;
+        }
+
+        foreach (BloonType bloon in eventInfo.children)
         {
             bloon.Freeze();
             _ = StartCoroutine(UnfreezeBloon(bloon, ApplyFreeze(bloon)));

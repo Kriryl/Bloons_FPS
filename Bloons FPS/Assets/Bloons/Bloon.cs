@@ -48,7 +48,7 @@ public class Bloon : MonoBehaviour
         }
     }
 
-    public virtual void OnDamageTaken(int damageAmount, int coinsToAdd)
+    public virtual void OnDamageTaken(int damageAmount, int coinsToAdd, GameObject other)
     {
         try
         {
@@ -59,6 +59,6 @@ public class Bloon : MonoBehaviour
         {
             print("waht");
         }
-        BloonHealth.TakeDamage(damageAmount);
+        BloonHealth.TakeDamage(damageAmount, other);
     }
 }

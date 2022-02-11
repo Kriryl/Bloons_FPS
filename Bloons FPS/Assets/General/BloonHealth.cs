@@ -8,13 +8,13 @@ public class BloonHealth : MonoBehaviour
     public AudioClip popsfx;
     public AudioClip damagesfx;
 
-    public void TakeDamage(int damageAmount)
+    public void TakeDamage(int damageAmount, GameObject other)
     {
         health -= damageAmount;
         if (health <= 0)
         {
             AudioSource.PlayClipAtPoint(popsfx, transform.position);
-            Die();
+            Die(other);
         }
         else
         {
@@ -22,8 +22,8 @@ public class BloonHealth : MonoBehaviour
         }
     }
 
-    public void Die()
+    public void Die(GameObject other)
     {
-        BroadcastMessage("OnDeath");
+        BroadcastMessage("OnDeath", other);
     }
 }
